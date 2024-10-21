@@ -15,12 +15,12 @@ export const projects: Project[] = [
     title: 'DarkLotusBlog',
     description: '由 Typecho 构建的个人博客🦖',
     preview: '/img/project/blog.avif',
-    website: 'https://darklotus.cn',
-    source: 'https://github.com/lianlianlianlianlianlian/DarkLotusIndex',
+    website: 'https://blog.darklotus.cn',
+    source: 'https://typecho.org/',
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
-    button: '源码', // 自定义按钮文本
-    emoji: '💗', // 自定义 emoji 图标
+    button: '官网', // 自定义按钮文本
+    emoji: '🚀', // 自定义 emoji 图标
   },
 
   // toy
