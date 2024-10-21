@@ -15,24 +15,24 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.developer',
-      message: 'TypeScript 全栈工程师',
+      message: '弟弟水平',
     }),
     description: (
       <Translate>
-        作为一名 TypeScript 全栈工程师，秉着能用 TS 绝不用 JS 的原则，为项目提供类型安全的保障，提高代码质量和开发效率。
+        作为一名弟弟，我始终秉持着“能让哥哥开心绝不让他担心”的原则，努力为家中增添欢声笑语，创造温馨氛围，尽力成为家人的小太阳。
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
-    icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
+   // icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: translate({
       id: 'homepage.feature.spider',
-      message: '会点逆向 & 爬虫',
+      message: '装逼高手',
     }),
     description: (
       <Translate>
-        作为一名曾学习与实践逆向工程两年半的开发者，对于逆向工程有着浓厚的兴趣，同时造就了超凡的阅读代码能力。没有看不懂的代码，只有不想看的代码。
+        作为一名装逼高手，能轻易的分辨弟弟们拙劣的装逼手段，弟弟要在哥哥面前保持弟弟，只能在弟中弟面前装。懂？
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,
@@ -44,7 +44,7 @@ const FEATURES: FeatureItem[] = [
     }),
     description: (
       <Translate>
-        作为一名开源爱好者，积极参与开源社区，为开源项目贡献代码，希望有生之年能够构建出一个知名的开源项目。
+        作为一名开源爱好者，积极参与开源社区，为开源项目贡献代码，希望有生之年能够构建出一个知名的开源项目，但目前只会改别人的开源代码。
       </Translate>
     ),
     header: <OpenSourceSvg className={'h-auto w-full'} height={150} role="img" />,
