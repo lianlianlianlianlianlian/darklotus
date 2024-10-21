@@ -162,10 +162,10 @@ const config: Config = {
     },
     // Giscus 评论配置
     giscus: {
-      repo: 'lianlianlianlianlianlian/DarkLotusIndex',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'lianlianlianlianlianlian/darklotus',
+      repoId: 'R_kgDONDeh2Q',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDONDeh2c4CjjbV',
       theme: 'light',
       darkTheme: 'dark_dimmed',
     } satisfies Partial<GiscusConfig>,

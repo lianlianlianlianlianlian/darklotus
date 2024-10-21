@@ -2,32 +2,51 @@ export const projects: Project[] = [
   {
     title: 'DarkLotusIndex',
     description: '由 Docusaurus 构建的个人主页🦖',
-    preview: '/img/project/blog.png',
+    preview: '/img/project/index.avif',
+    website: 'https://darklotus.cn',
+    source: 'https://github.com/lianlianlianlianlianlian/darklotus',
+    tags: ['opensource', 'design', 'favorite'],
+    type: 'web',
+    button: '源码', // 自定义按钮文本
+    emoji: '💗', // 自定义 emoji 图标
+  },
+
+  {
+    title: 'DarkLotusBlog',
+    description: '由 Typecho 构建的个人博客🦖',
+    preview: '/img/project/blog.avif',
     website: 'https://darklotus.cn',
     source: 'https://github.com/lianlianlianlianlianlian/DarkLotusIndex',
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
+    button: '源码', // 自定义按钮文本
+    emoji: '💗', // 自定义 emoji 图标
   },
+
   // toy
   {
-    title: '耍',
-    description: '耍',
-    preview: '/img/project/play.png',
+    title: 'MacBookPro',
+    description: '我的电脑',
+    preview: '/img/project/mac.avif',
     website: 'https://darklotus.cn',
     source: 'https://github.com/lianlianlianlianlianlian/DarkLotusIndex',
-    tags: ['opensource', 'favorite'],
+    tags: ['favorite'],
     type: 'toy',
+    button: '设备', // 自定义按钮文本
+    emoji: '💻', // 自定义 emoji 图标
   },
   
  // personal
   {
-    title: '这里是标题',
-    description: '这里是介绍',
-    preview: '/img/project/vscode-extension.png',
-    website: 'https://darklotus.cn',
+    title: 'Synology',
+    description: '我的Nas',
+    preview: '/img/project/nas.avif',
+    website: 'https://nas.darklotus.cn',
     source: 'https://github.com/lianlianlianlianlianlian/DarkLotusIndex',
-    tags: ['opensource'],
+    tags: ['favorite'],
     type: 'personal',
+    button: '设备', // 自定义按钮文本
+    emoji: '💥', // 自定义 emoji 图标
   },
  
   
@@ -35,7 +54,7 @@ export const projects: Project[] = [
   {
     title: '待编辑',
     description: '待编辑',
-    website: '待编辑',
+    website: 'https://nas.darklotus.cn',
     tags: ['opensource', 'personal'],
     type: 'other',
   },

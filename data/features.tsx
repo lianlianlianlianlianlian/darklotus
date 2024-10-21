@@ -19,7 +19,7 @@ const FEATURES: FeatureItem[] = [
     }),
     description: (
       <Translate>
-        作为一名弟弟，我始终秉持着“能让哥哥开心绝不让他担心”的原则，努力为家中增添欢声笑语，创造温馨氛围，尽力成为家人的小太阳。
+        作为一名弟弟，我始终秉持着“能让哥哥开心绝不让他担心”的原则，努力为大哥增添欢声笑语，创造温馨氛围，尽力成为大哥的小太阳。
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
@@ -32,7 +32,7 @@ const FEATURES: FeatureItem[] = [
     }),
     description: (
       <Translate>
-        作为一名装逼高手，能轻易的分辨弟弟们拙劣的装逼手段，弟弟要在哥哥面前保持弟弟，只能在弟中弟面前装。懂？
+        作为一名装逼高手，能轻易的分辨弟弟们拙劣的装逼手段，弟弟要在哥哥面前保持谦卑，只能在弟中弟面前装。懂？
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,

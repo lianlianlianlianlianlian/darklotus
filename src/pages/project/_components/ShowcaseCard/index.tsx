@@ -1,41 +1,33 @@
-import Link from '@docusaurus/Link'
-import Translate from '@docusaurus/Translate'
-import { type Project, type Tag, TagList, type TagType, Tags } from '@site/data/projects'
-import Tooltip from '@site/src/components/Tooltip'
-import { MagicCard } from '@site/src/components/magicui/magic-card'
-import FavoriteIcon from '@site/src/components/svgIcons/FavoriteIcon'
-import { cn } from '@site/src/lib/utils'
-import { sortBy } from '@site/src/utils/jsUtils'
-import Image from '@theme/IdealImage'
-import React, { memo } from 'react'
-import styles from './styles.module.css'
+import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
+import { type Project, type Tag, TagList, type TagType, Tags } from '@site/data/projects';
+import Tooltip from '@site/src/components/Tooltip';
+import { MagicCard } from '@site/src/components/magicui/magic-card';
+import { cn } from '@site/src/lib/utils';
+import Image from '@theme/IdealImage';
+import React, { memo } from 'react';
+import styles from './styles.module.css';
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(({ label, color, description }, ref) => (
   <li ref={ref} className={styles.tag} title={description}>
     <span className={styles.textLabel}>{label.toLowerCase()}</span>
     <span className={styles.colorLabel} style={{ backgroundColor: color }} />
   </li>
-))
+));
 
 function ShowcaseCardTag({ tags }: { tags: TagType[] }) {
-  const tagObjects = tags.map(tag => ({ tag, ...Tags[tag] }))
-
-  // Keep same order for all tags
-  const tagObjectsSorted = sortBy(tagObjects, tagObject => TagList.indexOf(tagObject.tag))
-
   return (
     <>
-      {tagObjectsSorted.map((tagObject, index) => {
-        const id = `showcase_card_tag_${tagObject.tag}`
-
+      {tags.map((tag, index) => {
+        const tagData = Tags[tag];
         return (
-          <Tooltip key={index} text={tagObject.description} anchorEl="#__docusaurus" id={id}>
-            <TagComp key={index} {...tagObject} />
+          <Tooltip key={index} text={tagData.description} anchorEl="#__docusaurus" id={`showcase_card_tag_${tag}`}>
+            <TagComp label={tagData.label} color={tagData.color} description={tagData.description} />
           </Tooltip>
-        )
+        );
       })}
     </>
-  )
+  );
 }
 
 const ShowcaseCard = memo(({ project }: { project: Project }) => {
@@ -51,13 +43,16 @@ const ShowcaseCard = memo(({ project }: { project: Project }) => {
           <h4 className={styles.showcaseCardTitle}>
             <Link href={project.website}>{project.title}</Link>
           </h4>
-          {project.tags.includes('favorite') && <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />}
-          {project.source && (
+          
+          {/* 使用自定义的 emoji 图标 */}
+          <span className={styles.emojiIcon}>{project.emoji}</span>
+
+          {project.button && (
             <Link
               href={project.source}
               className={cn('button button--secondary button--sm', styles.showcaseCardSrcBtn)}
             >
-              <Translate id="showcase.card.sourceLink">源码</Translate>
+              {project.button} {/* 渲染自定义按钮文本 */}
             </Link>
           )}
         </div>
@@ -67,7 +62,7 @@ const ShowcaseCard = memo(({ project }: { project: Project }) => {
         <ShowcaseCardTag tags={project.tags} />
       </ul>
     </MagicCard>
-  )
-})
+  );
+});
 
-export default ShowcaseCard
+export default ShowcaseCard;
