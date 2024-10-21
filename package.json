@@ -1,16 +1,16 @@
 {
-  "name": "blog",
+  "name": "darklotusindex",
   "version": "3.0.0",
   "author": {
-    "url": "https://github.com/kuizuo",
-    "email": "hi@kuizuo.cn",
-    "name": "愧怍"
+    "url": "https://github.com/lianlianlianlianlianlian",
+    "email": "lian@darklotus.cn",
+    "name": "Lian"
   },
   "repository": {
-    "url": "https://github.com/kuizuo/blog",
+    "url": "https://github.com/lianlianlianlianlianlian/blog",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://darklotus.cn",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
