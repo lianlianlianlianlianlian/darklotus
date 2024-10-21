@@ -1,0 +1,17 @@
+/* src/components/BackToTopButton.module.css */
+.backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff00; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000; /* 确保按钮在最上层 */
+    transition: opacity 0.3s;
+  }
+  
+
+  

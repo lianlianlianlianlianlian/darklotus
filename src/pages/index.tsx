@@ -5,6 +5,7 @@ import FeaturesSection from '../components/landing/FeaturesSection'
 import Hero from '../components/landing/Hero'
 import ProjectSection from '../components/landing/ProjectSection'
 import Particles from '../components/magicui/particles'
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
 
 export default function Home() {
   const {
@@ -29,6 +30,7 @@ export default function Home() {
             style={{ backgroundPosition: '10px 10px;' }}
           />
         </div>
+        <BackToTopButton /> {/* 在这里添加返回顶部按钮 */}
       </main>
     </Layout>
   )
