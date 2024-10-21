@@ -12,10 +12,10 @@ const TITLE = '友链'
 const DESCRIPTION = '有很多良友，胜于有很多财富。'
 const ADD_FRIEND_URL = 'https://github.com/kuizuo/blog/edit/main/data/friends.tsx'
 const SITE_INFO = `
-title: '愧怍'
-description: '道阻且长，行则将至'
-website: 'https://kuizuo.cn'
-avatar: 'https://kuizuo.cn/img/logo.png'
+title: 'Lian'
+description: '耍起嘛耍起'
+website: 'https://darklotus.cn'
+avatar: 'https://darklotus.cn/img/logo.png'
 `
 const friends = Friends
 
@@ -34,9 +34,7 @@ function FriendHeader() {
     <section className="margin-top--lg margin-bottom--lg text-center">
       <h1>{TITLE}</h1>
       <p>{DESCRIPTION}</p>
-      {/* <a className="button button--primary" href={ADD_FRIEND_URL} target="_blank" rel="noreferrer">
-        🔗 申请友链
-      </a> */}
+      <a className="button button--primary" href={ADD_FRIEND_URL} target="_blank" rel="noreferrer">申请友链</a>
     </section>
   )
 }

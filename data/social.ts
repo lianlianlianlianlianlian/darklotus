@@ -24,9 +24,9 @@ const social: Social = {
   wx: 'https://darklotus/img/wechat.png',
   // qq: 'https://img.kuizuo.cn/qq.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
-  cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
+  cloudmusic: 'https://music.163.com/#/user/home?id=44878296',
   email: 'mailto:lian@darklotus.cn',
-  discord: 'https://discord.gg/',
+  discord: 'https://discord.com/invite/xyqhsbmAg5',
 }
 
 const socialSet: Record<keyof Social | 'rss', SocialValue> = {

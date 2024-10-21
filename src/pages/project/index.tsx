@@ -13,14 +13,14 @@ import styles from './styles.module.css'
 
 const TITLE = translate({
   id: 'theme.project.title',
-  message: '项目',
+  message: 'Project',
 })
 const DESCRIPTION = translate({
   id: 'theme.project.description',
-  message: '学而无用，不如学而用之。这里是我在技术领域中努力实践和应用的最佳证明。',
+  message: '学习学习学习',
 })
 
-// const GITHUB_URL = 'https://github.com/kuizuo'
+// const GITHUB_URL = 'https://github.com/lianlianlianlianlianlian'
 
 type ProjectState = {
   scrollTopPosition: number
