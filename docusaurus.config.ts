@@ -217,7 +217,7 @@ const config: Config = {
   plugins: [
     'docusaurus-plugin-image-zoom', // 图像缩放插件
     '@docusaurus/plugin-ideal-image', // 理想图像处理插件
-    // ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }], // 百度统计（如果需要）
+    ['docusaurus-plugin-baidu-tongji', { token: 'c459ddf38cb87892f0d4b191dd564033' }], // 百度统计（如果需要）
     [
       '@docusaurus/plugin-pwa', // PWA 插件
       {
