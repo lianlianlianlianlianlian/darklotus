@@ -319,11 +319,19 @@ Love what you do and do what you love.
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Medium.min.css', // 字体样式
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css', // 字体样式
   ],
-  // 国际化配置
-  i18n: {
-    defaultLocale: 'zh-CN', // 默认语言
-    locales: ['zh-CN','en'], // 支持的语言
+// 国际化配置
+i18n: {
+  defaultLocale: 'zh-CN', // 默认语言
+  locales: ['zh-CN', 'en'], // 支持的语言
+  localeConfigs: {
+    'zh-CN': {
+      label: '中文', // 修改为你希望显示的中文标签
+    },
+    en: {
+      label: 'English', // 英文标签
+    },
   },
+},
   // 处理断链设置
   onBrokenLinks: 'warn', // 断链警告
 }
