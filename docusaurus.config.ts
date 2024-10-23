@@ -21,13 +21,13 @@ const config: Config = {
   // 组织名称（通常是 GitHub 组织）
   organizationName: 'DarkLotus',
   // 项目名称
-  projectName: 'DarkLotusIndex',
+  projectName: 'DarkLotus',
   // 自定义字段设置
   customFields: {
     // 博主简历
     bio: '耍起嘛耍起',
     // 网站描述
-    description: 'DarkLotusIndex是Lian的个人主页',
+    description: 'DarkLotus是Lian的个人主页',
   },
   // 网站主题配置
   themeConfig: {
@@ -254,7 +254,7 @@ const config: Config = {
         feedOptions: {
           type: 'all', // feed 类型
           title: 'Lian', // feed 标题
-          description: 'feedId:41215011978385457+userId:41840354283324416', // feed 描述
+          description: 'feedId:72001265617022976+userId:72000380639949824', // feed 描述
           copyright: `Copyright © ${new Date().getFullYear()} Lian Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`, // 版权信息
         },
       },
