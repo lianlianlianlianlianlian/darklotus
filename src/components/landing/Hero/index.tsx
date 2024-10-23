@@ -40,7 +40,7 @@ function Name() {
         e.currentTarget.style.setProperty('--y', `${e.clientY}px`)
       }}
     >
-      <Translate id="homepage.hero.greet">Hello, I am </Translate>
+      <Translate id="homepage.hero.greet">Hello! 我是</Translate>
       <span
         className={styles.name}
         onMouseMove={e => {
@@ -63,7 +63,7 @@ export default function Hero() {
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants} className="max-lg:px-4">
           <Translate id="homepage.hero.text">
-          Welcome to my Homepage May you never die!
+          欢迎来到我的主页，祝你永远不死！
           </Translate>
         </motion.p>
         <motion.div custom={3} initial="hidden" animate="visible" variants={variants}>
