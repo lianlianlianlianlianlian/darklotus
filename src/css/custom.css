@@ -297,3 +297,23 @@ div[class^='announcementBar_'] {
   )::after {
   content: '';
 }
+@media (max-width: 996px) {
+  .footer__col {
+      flex: 1 0;               
+      margin: 1px;                 
+      min-width: 50px;              
+      text-align: center;          
+  }
+}
+@media (max-width: 421px) {
+  .footer__col {
+      flex: 1 0 30%;                 
+      margin: 1px;                  
+      min-width: 50px;            
+      text-align: center;           
+  }
+}
+
+.footer {
+  background-color:#636567;
+}
