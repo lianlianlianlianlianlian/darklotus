@@ -3,6 +3,7 @@
     "message": "DarkLotus",
     "description": "The title in the navbar"
   },
+
   "item.label.文档": {
     "message": "Docs",
     "description": "Navbar item with label 文档"
@@ -38,5 +39,11 @@
   "item.label.归档": {
     "message": "Archive",
     "description": "Navbar item with label 归档"
-  }
+  },
+
+  "item.label.更多": {
+    "message": "More",
+    "description": "The title in the More"
+  },
+  
 }
