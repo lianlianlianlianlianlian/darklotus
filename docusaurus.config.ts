@@ -318,11 +318,7 @@ Love what you do and do what you love.
   // 国际化配置
   i18n: {
     defaultLocale: 'zh-CN', // 默认语言
-<<<<<<< HEAD
     locales: ['en', 'zh-CN'], // 支持的语言
-=======
-    locales: ['zh-CN'], // 支持的语言
->>>>>>> c5fdc65ebf12d80a3a25d1ea9c94795209456c03
   },
   // 处理断链设置
   onBrokenLinks: 'warn', // 断链警告
