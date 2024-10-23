@@ -57,7 +57,6 @@ export const projects: Project[] = [
     website: 'https://nas.darklotus.cn',
     tags: ['opensource', 'personal'],
     type: 'other',
-    button: '编辑', // 添加按钮文本
   },
 
 ]
@@ -73,25 +72,23 @@ export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large'
 export type ProjectType = 'web' | 'app' | 'commerce' | 'personal' | 'toy' | 'other'
 
 export const projectTypeMap = {
-  web: '网站',
-  app: '应用',
-  commerce: '商业',
-  personal: '个人',
-  toy: '玩具',
-  other: '其他',
+  web: 'Web',
+  app: 'App',
+  commerce: 'Cmmerce',
+  personal: 'Personal',
+  toy: 'Toy',
+  other: 'Other',
 }
 
 export type Project = {
-  title: string;
-  description: string;
-  preview?: string; 
-  website: string;
-  source?: string | null; 
-  tags: TagType[];
-  type: ProjectType;
-  button?: string; 
-  emoji?: string; 
-};
+  title: string
+  description: string
+  preview?: string
+  website: string
+  source?: string | null
+  tags: TagType[]
+  type: ProjectType
+}
 
 export const Tags: Record<TagType, Tag> = {
   favorite: {

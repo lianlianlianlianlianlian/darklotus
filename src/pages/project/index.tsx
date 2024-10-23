@@ -13,7 +13,7 @@ import styles from './styles.module.css'
 
 const TITLE = translate({
   id: 'theme.project.title',
-  message: '项目',
+  message: 'Project',
 })
 const DESCRIPTION = translate({
   id: 'theme.project.description',
