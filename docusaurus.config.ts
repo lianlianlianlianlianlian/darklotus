@@ -206,7 +206,7 @@ const config: Config = {
           priority: 0.5, // sitemap 优先级
         },
         gtag: {
-          trackingID: 'G-S4SD5NXWXF', // Google Analytics 跟踪 ID
+          trackingID: 'G-15MDBV0ZX8', // Google Analytics 跟踪 ID
           anonymizeIP: true, // 匿名 IP
         },
         debug: process.env.NODE_ENV === 'development', // 调试模式
