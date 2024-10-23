@@ -142,9 +142,9 @@ const config: Config = {
     },
     // Algolia 搜索配置（如果启用外部搜索）
     algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'DarkLotus',
+      appId: 'ZLJQMSZ3VZ',
+      apiKey: '2a0924f0362b7b8b09c62c2f2dff755b',
+      indexName: 'darklotus',
     },
     // 代码高亮主题配置
     prism: {
