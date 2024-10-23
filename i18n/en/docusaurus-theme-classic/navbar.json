@@ -19,6 +19,10 @@
     "message": "Friends",
     "description": "Navbar item with label 友链"
   },
+  "item.label.关于": {
+    "message": "About",
+    "description": "Navbar item with label 关于"
+  },
   "item.label.工具": {
     "message": "Tools",
     "description": "Navbar item with label 工具"
