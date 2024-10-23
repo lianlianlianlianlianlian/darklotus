@@ -281,7 +281,7 @@ const config: Config = {
                 innerHTML: `
     (${function () {
       console.log(
-        `%c Kz Blog %c https://github.com/lianlianlianlianlianlian/DarkLotusIndex`,
+        `%c DarkLotus %c https://github.com/lianlianlianlianlianlian/darklotus`,
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #12affa;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )
