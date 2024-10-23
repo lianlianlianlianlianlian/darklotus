@@ -1,8 +1,4 @@
 {
-  "navbar.title": {
-    "message": "Dark Lotus",
-    "description": "Website title in English"
-  }
   "homepage.hero.greet": {
     "message": "Hello! I'm ",
     "description": "hero greet"

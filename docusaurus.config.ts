@@ -11,8 +11,8 @@ const beian1 = '备案中'
 // Docusaurus 配置主对象
 const config: Config = {
   // 网站标题
-  title: '黑暗之莲',
-  // 网站 URL
+  title: 'DarkLotus',
+  tagline: '黑暗之莲', 
   url: 'https://darklotus.cn',
   // 基础 URL
   baseUrl: '/',
