@@ -47,7 +47,7 @@ const ShowcaseCard = memo(({ project }: { project: Project }) => {
           {/* 使用自定义的 emoji 图标 */}
           <span className={styles.emojiIcon}>{project.emoji}</span>
 
-          {project.button && (
+          {project.button && project.source && ( // 添加条件检查
             <Link
               href={project.source}
               className={cn('button button--secondary button--sm', styles.showcaseCardSrcBtn)}

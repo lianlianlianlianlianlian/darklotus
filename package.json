@@ -1,6 +1,6 @@
 {
   "name": "darklotusindex",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "author": {
     "url": "https://github.com/lianlianlianlianlianlian",
     "email": "lian@darklotus.cn",
@@ -64,6 +64,7 @@
     "@docusaurus/types": "3.5.2",
     "@iconify/react": "^5.0.1",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/jest": "^29.5.13",
     "typescript": "~5.5.2"
   },
   "engines": {

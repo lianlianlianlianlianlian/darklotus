@@ -42,7 +42,7 @@ const config: Config = {
     metadata: [
       {
         name: 'author',
-        content: 'Lian', // 作者
+        content: 'lian', // 作者
       },
       {
         name: 'keywords',
@@ -73,6 +73,10 @@ const config: Config = {
         { label: '项目', position: 'right', to: 'project' },
         { label: '友链', position: 'right', to: 'friends' },
         { label: '关于', position: 'right', to: 'about' },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         {
           label: '更多',
           position: 'right',
