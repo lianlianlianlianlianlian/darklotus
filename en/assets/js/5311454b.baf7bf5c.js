@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdarklotusindex=self.webpackChunkdarklotusindex||[]).push([[5430],{2185:e=>{e.exports=JSON.parse('{"tags":[{"label":"Hello","permalink":"/en/blog/tags/hello","count":1},{"label":"Test","permalink":"/en/blog/tags/test","count":2},{"label":"Minio","permalink":"/en/blog/tags/minio","count":1}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdarklotusindex=self.webpackChunkdarklotusindex||[]).push([[8146],{9328:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":12,"totalPages":1,"totalCount":2,"blogDescription":"\u6211\u7684\u535a\u5ba2","blogTitle":"Blog"}}')}}]);

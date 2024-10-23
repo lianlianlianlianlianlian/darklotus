@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdarklotusindex=self.webpackChunkdarklotusindex||[]).push([[7882],{6341:a=>{a.exports=JSON.parse('{"authors":[{"name":"Lian","title":"ts full stack / Student","url":"https://github.com/lianlianlianlianlianlian","imageURL":"/img/logo.png","key":"lian","page":null,"count":2}]}')}}]);
