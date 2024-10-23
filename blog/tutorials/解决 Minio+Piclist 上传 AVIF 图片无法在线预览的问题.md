@@ -3,10 +3,15 @@ slug: minioavif
 title: 解决 Minio+Piclist 上传 AVIF 图片无法在线预览的问题
 date: 2024-10-19 01:59
 authors: lian
-tags: [Minio, Test]
+tags: [Minio,Piclist,Avif]
 keywords: [教程]
 image: https://oss.darklotus.cn/img/2024/10/16/202410162053664.png
 ---
+
+Piclist设置Mini即可解决Minio上传 AVIF 图片无法在线预览的问题
+
+<!-- truncate -->
+
 以下的教程不用看了 我不删就是想让大家知道我是如何从失败到成功的 
 
 cdn的方法行不通 看似成功了 但是你会发现xml页面也变成了image 所有的请求头都被覆盖了 
@@ -16,10 +21,6 @@ cdn的方法行不通 看似成功了 但是你会发现xml页面也变成了ima
 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/MIME_types/Common_types
 
 看完才知道piclist早就支持了 目前已经学会 成功解决了这个问题 大家可以放心学习！！！
-
-<!-- truncate -->
-
-
 
 ## 自定义 MIME
 
