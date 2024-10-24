@@ -42,9 +42,16 @@
   background-clip: text;
 }
 
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); } /* 增加浮动高度 */
+  100% { transform: translateY(0); }
+}
+
 .background {
   @apply relative w-full h-[90%] grid place-items-center items-start;
   z-index: 5;
+  animation: float 5s infinite ease-in-out; /* 漂浮动画 */
 }
 
 .background svg {
