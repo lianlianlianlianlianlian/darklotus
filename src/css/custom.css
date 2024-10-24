@@ -300,15 +300,15 @@ div[class^='announcementBar_'] {
 @media (max-width: 996px) {
   .footer__col {
       flex: 1 0;               
-      margin: 1px;                 
-      min-width: 50px;              
+      margin: -1px;                 
+      min-width: 5px;              
       text-align: center;          
   }
 }
 @media (max-width: 421px) {
   .footer__col {
       flex: 1 0 30%;                 
-      margin: 1px;                  
+      margin: -2px;                  
       min-width: 50px;            
       text-align: center;           
   }
