@@ -14,7 +14,7 @@ const TITLE = translate({
 })
 const DESCRIPTION = translate({
   id: 'theme.friends.description',
-  message: '菜就多练 输不起就别玩',
+  message: '妈的！最烦装逼的人！',
 })
 const ADD_FRIEND_URL = 'https://github.com/lianlianlianlianlianlian/darklotus/edit/main/data/friends.tsx'
 const SITE_INFO = `
