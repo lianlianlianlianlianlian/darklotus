@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 import styles from './styles.module.css'
 
 const TITLE = '友链'
-const DESCRIPTION = '妈的最烦装逼的人！'
+const DESCRIPTION = '妈的！最烦装逼的人！'
 const ADD_FRIEND_URL = 'https://github.com/lianlianlianlianlianlian/darklotus/edit/main/data/friends.tsx'
 const SITE_INFO = `
 title: 'Lian'

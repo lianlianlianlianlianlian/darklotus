@@ -17,7 +17,7 @@ const TITLE = translate({
 })
 const DESCRIPTION = translate({
   id: 'theme.project.description',
-  message: '学习学习学习',
+  message: '菜就多练 输不起就别玩',
 })
 
 // const GITHUB_URL = 'https://github.com/lianlianlianlianlianlian'

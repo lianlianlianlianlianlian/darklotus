@@ -81,7 +81,8 @@ const config: Config = {
           label: '更多',
           position: 'right',
           items: [
-            { label: '归档', to: 'blog/archive' }, // 子菜单中的归档链接
+            { label: '标签', to: 'blog/tags' }, // 子菜单中的归档链接
+            { label: '归档', to: 'blog/archive' }, 
           ],
         },
         // {
@@ -226,7 +227,7 @@ const config: Config = {
         pwaHead: [
           { tagName: 'link', rel: 'icon', href: '/img/logo.png' }, // 网站图标
           { tagName: 'link', rel: 'manifest', href: '/manifest.json' }, // PWA manifest
-          { tagName: 'meta', name: 'theme-color', content: '#f8080' }, // 主题颜色
+          { tagName: 'meta', name: 'theme-color', content: '#ff8080' }, // 主题颜色
         ],
       },
     ],
@@ -283,13 +284,13 @@ const config: Config = {
       console.log(
         `%c DarkLotus %c https://github.com/lianlianlianlianlianlian/darklotus`,
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #12affa;',
-        'margin: 1em 0; padding: 5px 0; background: #efefef;',
+        'margin: 1em 0; padding: 5px 0; background: #ff8080;',
       )
 
       const motto = `
 This Webisite Powered By DarkLotus
 --------
-Love what you do and do what you love.
+Cai Jiu Duo Lian！
 `
 
       if (document.firstChild?.nodeType !== Node.COMMENT_NODE) {
