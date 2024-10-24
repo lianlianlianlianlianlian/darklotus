@@ -317,3 +317,7 @@ div[class^='announcementBar_'] {
 .footer {
   background-color:#636567;
 }
+
+img {
+  -webkit-user-drag: none; /* 禁用拖动 */
+}

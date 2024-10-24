@@ -102,13 +102,6 @@ html[data-theme='dark'] .showcaseCardSrcBtn:hover {
   margin-left: 6px;
   margin-right: 6px;
 }
-
-img {
-  pointer-events: none; /* 禁用该容器内所有图片的点击和选中 */
-  user-select: none; /* 禁用用户选择 */
-  -webkit-user-drag: none; /* 禁用拖动 */
-}
-
 .emojiIcon {
   margin-right: 1px; /* 根据需要调整间距 */
   font-size: 1.1em; /* 根据需要调整大小 */
