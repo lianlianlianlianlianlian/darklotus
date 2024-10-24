@@ -3,13 +3,19 @@ import Layout from '@theme/Layout'
 import { memo, useRef } from 'react'
 
 import { Friend, Friends } from '@site/data/friends'
-
+import { translate } from '@docusaurus/Translate'
 import Link from '@docusaurus/Link'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
 
-const TITLE = '友链'
-const DESCRIPTION = '妈的！最烦装逼的人！'
+const TITLE = translate({
+  id: 'theme.friends.title',
+  message: '友链',
+})
+const DESCRIPTION = translate({
+  id: 'theme.friends.description',
+  message: '菜就多练 输不起就别玩',
+})
 const ADD_FRIEND_URL = 'https://github.com/lianlianlianlianlianlian/darklotus/edit/main/data/friends.tsx'
 const SITE_INFO = `
 title: 'Lian'

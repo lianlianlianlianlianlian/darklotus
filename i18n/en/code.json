@@ -1,4 +1,14 @@
 {
+  "theme.friends.title": {
+    "message": "Friend Links",
+    "description": "友链标题"
+  },
+
+  "theme.friends.description": {
+    "message": "If You’re Not Good Practice More If You Can’t Handle Losing Then Don’t Play！",
+    "description": "友链描述"
+  },
+
   "homepage.hero.greet": {
     "message": "Hello! I'm ",
     "description": "hero greet"
