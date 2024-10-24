@@ -255,7 +255,7 @@ const config: Config = {
         feedOptions: {
           type: 'all', // feed 类型
           title: 'Lian', // feed 标题
-          description: 'feedId:72001265617022976+userId:72000380639949824', // feed 描述
+          description: 'DarkLotus', // feed 描述
           copyright: `Copyright © ${new Date().getFullYear()} Lian Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`, // 版权信息
         },
       },
