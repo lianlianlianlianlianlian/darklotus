@@ -133,13 +133,19 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
-          beian1.match(/\d+/)?.[0]
-        }" >${beian1}</a></p>
-        <p>Copyright © 2024 - ${new Date().getFullYear()} DarkLotus. | Built with Docusaurus.</p>
-        `,
+copyright: `
+    <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
+    <p style="display: inline-flex; align-items: center;">
+        <img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(/\d+/)?.[0]}">${beian1}</a>
+    </p>
+<p style="margin-bottom: 0;">
+Illustration with <a href="https://www.shigureni.com/">Shigureni</a>
+</p>
+<p style="margin-bottom: 0;">
+The theme is created by <a href="https://kuizuo.cn/">Kuizuo</a>
+</p>
+<p style="margin-top: 0; margin-bottom: 0;">Copyright © 2024 - ${new Date().getFullYear()} DarkLotus. | Built with Docusaurus.</p>
+`,
     },
     // Algolia 搜索配置（如果启用外部搜索）
     algolia: {
@@ -243,9 +249,9 @@ const config: Config = {
       {
         path: 'blog', // 博客路径
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/lianlianlianlianlianlian/blog/edit/main/${blogDirPath}/${blogPath}`, // 编辑链接
+          `https://github.com/lianlianlianlianlianlian/darklotus/edit/main/${blogDirPath}/${blogPath}`, // 编辑链接
         editLocalizedFiles: false, // 是否允许本地化文件编辑
-        blogDescription: '我的博客', // 博客描述
+        blogDescription: 'Lian的博客', // 博客描述
         blogSidebarCount: 10, // 侧边栏显示的博文数量
         blogSidebarTitle: '博文', // 侧边栏标题
         postsPerPage: 12, // 每页博文数
@@ -254,9 +260,9 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }), // 计算阅读时间
         feedOptions: {
           type: 'all', // feed 类型
-          title: 'Lian', // feed 标题
-          description: 'DarkLotus', // feed 描述
-          copyright: `Copyright © ${new Date().getFullYear()} Lian Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`, // 版权信息
+          title: 'DarkLotus', // feed 标题
+          description: 'DarkLotus主页', // feed 描述
+          copyright: `Copyright © ${new Date().getFullYear()} DarkLotus Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`, // 版权信息
         },
       },
     ],
