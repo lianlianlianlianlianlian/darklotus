@@ -61,7 +61,7 @@ const config: Config = {
     },
     // 导航栏配置
     navbar: {
-      title: '黑暗之莲',
+      title: '黑暗之莲', // 左上角导航栏标题（可关闭）
       logo: {
         alt: '黑暗之莲', // LOGO 描述
         src: 'img/logo.png', // LOGO 图像路径
