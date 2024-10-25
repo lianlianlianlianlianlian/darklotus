@@ -135,17 +135,21 @@ const config: Config = {
         },
       ],
 copyright: `
-    <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-    <p style="display: inline-flex; align-items: center;">
-        <img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(/\d+/)?.[0]}">${beian1}</a>
-    </p>
 <p style="margin-bottom: 0;">
-Illustration with <a href="https://www.shigureni.com/">Shigureni</a>
+    <a href="http://beian.miit.gov.cn/" style="color: inherit;">${beian}</a>
+</p>
+<p style="display: inline-flex; align-items: center;">
+    <img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/>
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(/\d+/)?.[0]}" style="color: inherit;">${beian1}</a>
 </p>
 <p style="margin-bottom: 0;">
-The theme is created by <a href="https://kuizuo.cn/">Kuizuo</a>
+    Illustration with <a href="https://www.shigureni.com/" style="color: inherit;">Shigureni</a>
+</p>
+<p style="margin-bottom: 0;">
+    The theme is created by <a href="https://kuizuo.cn/" style="color: inherit;">Kuizuo</a>
 </p>
 <p style="margin-top: 0; margin-bottom: 0;">Copyright © 2024 - ${new Date().getFullYear()} DarkLotus. | Built with Docusaurus.</p>
+
 `,
     },
     // Algolia 搜索配置（如果启用外部搜索）
