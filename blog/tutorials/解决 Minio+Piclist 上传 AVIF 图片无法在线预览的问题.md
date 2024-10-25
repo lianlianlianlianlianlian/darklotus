@@ -4,7 +4,7 @@ title: 解决 Minio+Piclist 上传 AVIF 图片无法在线预览的问题
 date: 2024-10-19 01:59
 authors: [lian]
 tags: [Minio,Piclist,Avif]
-keywords: [教程]
+keywords: [Minio,Piclist,Avif,教程]
 image: https://oss.darklotus.cn/img/2024/10/16/202410162053664.png
 ---
 
@@ -60,9 +60,10 @@ avif:image/avif
 
 用curl命令查看
 
-    ```
+```bash
 curl -I https://oss.darklotus.cn/img/2024/09/25/202409250237596.avif
-    ```
+```
+
 得到
 ![](https://oss.darklotus.cn/img/2024/10/19/WX20241019-015048@2x.avif)
 显示content-type: image/avif 就算成功了

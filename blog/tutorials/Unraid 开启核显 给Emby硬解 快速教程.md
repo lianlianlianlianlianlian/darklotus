@@ -4,7 +4,7 @@ title: Unraid 开启核显 给Emby硬解 快速教程
 date: 2024-01-10 00:59
 authors: lian
 tags: [Unraid]
-keywords: [教程]
+keywords: [Unraid,教程]
 image: https://i.darklotus.cn/images/2024/04/17/202404171651264.jpg
 ---
 

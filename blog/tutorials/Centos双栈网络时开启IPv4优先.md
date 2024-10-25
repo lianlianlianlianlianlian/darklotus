@@ -4,7 +4,7 @@ title: Centos双栈网络时开启IPv4优先
 date: 2024-05-07 00:00
 authors: lian
 tags: [Linux,Centos,Debian]
-keywords: [教程]
+keywords: [Linux,Centos,Debian,教程]
 image: https://i.darklotus.cn/images/2024/04/17/linux.webp
 ---
 

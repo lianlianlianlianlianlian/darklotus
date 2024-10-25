@@ -3,8 +3,8 @@ slug: cloudflaretunnelsmb
 title: Cloudflare Tunnel 内网穿透SMB
 date: 2024-03-06 18:26
 authors: lian
-tags: [Cloudflare,smb]
-keywords: [教程]
+tags: [Cloudflare,Smb]
+keywords: [Cloudflare,Smb,教程]
 image: https://i.darklotus.cn/images/2024/04/17/202404171654260.png
 
 ---

@@ -4,7 +4,7 @@ title: MoviePilot企业微信推送之新手喂饭教程
 date: 2024-02-01 08:07
 authors: lian
 tags: [Moviepilot,微信推送]
-keywords: [教程]
+keywords: [Moviepilot,微信推送,教程]
 image: https://i.darklotus.cn/2024/j06jhc.webp
 ---
 

@@ -4,7 +4,7 @@ title: Chevereto开启上传的照片自动删除
 date: 2024-04-19 00:00
 authors: lian
 tags: [Chevereto,图床,脚本]
-keywords: [教程]
+keywords: [Chevereto,图床,脚本,教程]
 image: https://chevereto.com/src/img/screens/version/4.0/user-listing-selected.webp
 ---
 

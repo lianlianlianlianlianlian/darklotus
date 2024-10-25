@@ -4,7 +4,7 @@ title: Unraid使用SFTPGO快速上手（Docker通用）
 date: 2024-01-10 00:59
 authors: lian
 tags: [Unraid,Sftpgo]
-keywords: [教程]
+keywords: [Unraid,Sftpgo,教程]
 image: https://pic.imgdb.cn/item/64c2bacc1ddac507cc27082d.jpg
 ---
 
