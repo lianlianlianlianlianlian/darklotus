@@ -1,7 +1,7 @@
 {
   "title": {
-    "message": "DarkLotus",
-    "description": "The title in the navbar"
+    "message": "黑暗之莲",
+    "description": "导航栏中的标题"
   },
   "item.label.标签": {
     "message": "标签",
