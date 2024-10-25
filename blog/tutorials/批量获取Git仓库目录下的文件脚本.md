@@ -9,7 +9,7 @@ image: https://cdn-icons-png.flaticon.com/512/52/52040.png
 
 ---
 
-先把仓库clone到本地 然后在本地找文件名字 然后再给文件名字加上gitee仓库的网址前缀 这样是最快 最稳的
+先把仓库clone到本地 然后在本地找文件名字 然后再给文件名字加上git仓库的网址前缀 这样是最快 最稳的
 
 <!-- truncate -->
 

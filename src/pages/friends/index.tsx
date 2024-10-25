@@ -1,7 +1,7 @@
 import CodeBlock from '@theme/CodeBlock'
 import Layout from '@theme/Layout'
-import { memo, useRef } from 'react'
-
+import { memo, useRef, useState } from 'react'
+import Comment from '@site/src/components/Comment'
 import { Friend, Friends } from '@site/data/friends'
 import { translate } from '@docusaurus/Translate'
 import Link from '@docusaurus/Link'
@@ -35,12 +35,20 @@ function SiteInfo() {
   )
 }
 
-function FriendHeader() {
+function FriendHeader({ onApplyClick, showFooter }: { onApplyClick: () => void, showFooter: boolean }) {
   return (
     <section className="margin-top--lg margin-bottom--lg text-center">
       <h1>{TITLE}</h1>
       <p>{DESCRIPTION}</p>
-      <a className="button button--primary" href={ADD_FRIEND_URL} target="_blank" rel="noreferrer">申请友链</a>
+      {showFooter ? (
+        <button className="button button--primary" onClick={onApplyClick}>
+          申请友链
+        </button>
+      ) : (
+        <a href={ADD_FRIEND_URL} target="_blank" rel="noopener noreferrer" className="button button--primary">
+          申请友链
+        </a>
+      )}
     </section>
   )
 }
@@ -48,7 +56,6 @@ function FriendHeader() {
 const FriendCard = memo(({ friend }: { friend: Friend }) => (
   <li className="relative flex min-h-24 cursor-pointer flex-row items-center overflow-hidden rounded-card bg-card px-4 py-1 transition-all duration-300 hover:translate-y-[-5px] hover:scale-[1.01] hover:bg-[rgba(229,231,235,0.3)] hover:shadow-[0_3px_10px_0_rgba(164,190,217,0.3)]">
     <img
-      // @ts-ignore
       src={typeof friend.avatar === 'string' ? friend.avatar : friend.avatar.src.src}
       alt={friend.title}
       className="size-16 min-w-16 rounded-full object-contain"
@@ -58,7 +65,6 @@ const FriendCard = memo(({ friend }: { friend: Friend }) => (
         <h4 className="mb-0 flex-1">
           <Link
             to={friend.website}
-            rel=""
             className="bg-[0%_100%] bg-[length:0%_1px] bg-gradient-to-b from-ifm-color-primary to-ifm-color-primary bg-no-repeat no-underline transition-[background-size] duration-200 ease-out hover:bg-[length:100%_1px] focus:bg-[length:100%_1px]"
           >
             {friend.title}
@@ -86,16 +92,25 @@ function FriendCards() {
 
 export default function FriendLink(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null)
+  const commentRef = useRef<HTMLDivElement>(null)
+  const [showFooter, setShowFooter] = useState(true) // false关闭 true开启 控制按钮是否跳转到页脚
+
+  const scrollToComment = () => {
+    commentRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <Layout title={TITLE} description={DESCRIPTION} wrapperClassName="bg-background">
       <motion.main ref={ref} className="my-4">
-        <FriendHeader />
+        <FriendHeader onApplyClick={scrollToComment} showFooter={showFooter} />
         <FriendCards />
         <motion.div drag dragConstraints={ref} className="sticky bottom-4 left-4 inline-flex cursor-move text-right">
           <SiteInfo />
         </motion.div>
       </motion.main>
+      <div ref={commentRef} className={styles.commentContainer}>
+        <Comment />
+      </div>
     </Layout>
   )
 }
