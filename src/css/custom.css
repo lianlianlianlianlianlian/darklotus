@@ -321,3 +321,15 @@ div[class^='announcementBar_'] {
 img {
   -webkit-user-drag: none; /* 禁用拖动 */
 }
+
+
+@font-face {
+  font-family: 'HuangKaihua';
+  src: url('./fonts/HuangKaihua.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar__title {
+  font-family: 'HuangKaihua', cursive; /* 使用自定义字体 */
+}
