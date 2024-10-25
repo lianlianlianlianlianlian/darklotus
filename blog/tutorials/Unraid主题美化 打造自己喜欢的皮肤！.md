@@ -9,9 +9,12 @@ image: https://pic.imgdb.cn/item/64b362dd1ddac507cc558043.jpg
 ---
 
 我已经不玩unraid了 大家可以去这位大佬那学习 我也是跟她学的
-<https://space.bilibili.com/28946694>
+https://space.bilibili.com/28946694
 
 <!-- truncate -->
+
+
+
 
 ## 下载主题文件
 
@@ -55,6 +58,7 @@ image: https://pic.imgdb.cn/item/64b362dd1ddac507cc558043.jpg
 
 ### Custom styling (advanced)填入以下代码
 
+
 ```
 </style>
 <link type="text/css" rel="Stylesheet" href="/mnt/user/theme/theme.css" />
@@ -64,7 +68,7 @@ image: https://pic.imgdb.cn/item/64b362dd1ddac507cc558043.jpg
 
 - 参考图片参数 确认无误后保存
 
-## 大功告成
+## 大功告成！
 
 因为这个很简单 所以我就没有把皮肤取下做教程
 

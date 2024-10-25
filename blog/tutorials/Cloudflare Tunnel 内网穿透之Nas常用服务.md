@@ -70,9 +70,11 @@ tr我不用 以我猜测 效果差不多 因为这些面板其实没有太多大
 
 切记以上服务在内网访问全是http 这样才能无损的套上cf的自签证书 https会出问题 解决办法我没有研究 因为没必要 我自己本人还是自己买服务器来frp穿透 效果会好很多～
 
+
+
 ## 注册Cloudflare
 
- <https://dash.cloudflare.com/sign-up>, <https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg>
+ https://dash.cloudflare.com/sign-up, https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg
 
 我推荐所有人都把域名托管到cf 甚至直接在cf花钱注册域名 不要问我为什么 照做就行了
 
@@ -85,6 +87,8 @@ tr我不用 以我猜测 效果差不多 因为这些面板其实没有太多大
 ![image-20240307203731624](https://i.darklotus.cn/images/2024/04/17/202404171657621.png)
 
 ![image-20240307204049426](https://i.darklotus.cn/images/2024/04/17/202404171657643.png)
+
+
 
 ### 以群晖Docker举例
 
@@ -100,13 +104,25 @@ docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token
 docker run --restart always cloudflare/cloudflared:latest tunnel --no-autoupdate run --token
 ```
 
+
+
 群晖运行docker命令的方法还是老方法 所有人都必须学会的一个东西 这里就不细致的重述了
+
+
 
 ![image-20240307195002802](https://i.darklotus.cn/images/2024/04/17/202404171657624.png)
 
+
+
 ![image-20240307195214441](https://i.darklotus.cn/images/2024/04/17/202404171657956.png)
 
+
+
 ## 添加要穿透的内网服务
+
+
+
+
 
 ![image-20240306034913821](https://i.darklotus.cn/images/2024/04/17/202404171657151.png)
 
@@ -114,22 +130,22 @@ docker run --restart always cloudflare/cloudflared:latest tunnel --no-autoupdate
 
 我的qb内网地址为：
 
-<http://192.168.31.1:8080>
+http://192.168.31.1:8080
 
 我的MP内网地址为：
 
-<http://192.168.31.1:3000>
+http://192.168.31.1:3000
 
 我的nas地址为：
 
-<http://192.168.31.1:5000>
+http://192.168.31.1:5000
 
 切记内网必须保持http nas别开https！！！！！！
 
 ![image-20240307200018714](https://i.darklotus.cn/images/2024/04/17/202404171657384.png)
 
-挨个添加就完事了 就这么简单 添加完了 你直接访问 <https://qb.xxx.com> 就能https带证书 去端口访问了
+挨个添加就完事了 就这么简单 添加完了 你直接访问 https://qb.xxx.com 就能https带证书 去端口访问了
 
-mp nas 按照上面图片自己添加就完了 这教程就这么简单 更进阶的教程 我得动动脑子再来写了 我语言组织能力还是不太强
+mp nas 按照上面图片自己添加就完了 这教程就这么简单 更进阶的教程 我得动动脑子再来写了 我语言组织能力还是不太强 
 
 cf的内网穿透服务还可以给自己穿透的域名上一层验证 必须自己才能访问打开面板 这个网上教程也很多 我有点懒得讲了 看想学的人多不多吧 多的话我再写 不多就懒得写

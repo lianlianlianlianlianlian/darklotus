@@ -22,15 +22,20 @@ modprobe i915
 
 ![打开ssh 输入开启核显命令](https://i.darklotus.cn/images/2024/04/17/202404171651740.jpg)
 
+
 ### 检查核显开启状态
 
 ```bash
 ls /dev/dri
 ```
 
+
+
 ### 成功驱动核显
 
 ![显示箭头所示即代表开启成功](https://i.darklotus.cn/images/2024/04/17/202404171651011.jpg)
+
+
 
 ### 设置开机启动项
 
@@ -53,6 +58,7 @@ esc键退出
 
 直接输入“:wq”
 
+
 ## 第二种方法
 
 ### 打开u盘引导“Flash”的SMB共享
@@ -63,6 +69,7 @@ esc键退出
 
 ![设置如图](https://i.darklotus.cn/images/2024/04/17/202404171651043.jpg)
 
+
 ### 打开路径：flash—config—go“
 
 用记事本打开
@@ -70,6 +77,7 @@ esc键退出
 ![打开路径：flash—config—go“](https://i.darklotus.cn/images/2024/04/17/202404171651313.jpg)
 
 ![打开路径：flash—config—go“](https://i.darklotus.cn/images/2024/04/17/202404171651099.jpg)
+
 
 ### 复制粘贴开启开机自启的核显代码
 
@@ -80,6 +88,7 @@ chown -R nobody:users /dev/dri
 ```
 
 这样你每次开机核显都会开启了
+
 
 ### 给Emby Jellyfin Plex docker添加核显设备
 

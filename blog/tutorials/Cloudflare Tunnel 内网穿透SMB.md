@@ -21,6 +21,8 @@ image: https://i.darklotus.cn/images/2024/04/17/202404171654260.png
 
 ![image-20240306031838506](https://i.darklotus.cn/images/2024/04/17/202404171653782.png)
 
+
+
 ![image-20240306032000119](https://i.darklotus.cn/images/2024/04/17/202404171653822.png)
 
 ![image-20240306032214363](https://i.darklotus.cn/images/2024/04/17/202404171653859.png)
@@ -35,7 +37,11 @@ image: https://i.darklotus.cn/images/2024/04/17/202404171654260.png
 
 [Cloudflare Zero Trust 文档](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/)
 
+
+
 ![image-20240306033301419](https://i.darklotus.cn/images/2024/04/17/202404171653870.png)
+
+
 
 Macos：
 
@@ -51,9 +57,13 @@ winget install --id Cloudflare.cloudflared
 
 其他的自己去文档看 linux 我也不会
 
+
+
 Macos安装完成界面：
 
 ![image-20240306033430359](https://i.darklotus.cn/images/2024/04/17/202404171653033.png)
+
+
 
 ## 将目标Tunnel转发到本地
 
@@ -68,6 +78,8 @@ cloudflared access tcp --hostname smb.example.com --url localhost:8445
 ![image-20240306034300297](https://i.darklotus.cn/images/2024/04/17/202404171653069.png)
 
 （这个界面不能关 关了就失效 得重新运行 ）
+
+
 
 ## 后台运行命令
 
@@ -115,7 +127,7 @@ kill -9 [进程ID]
 
 假设你使用的是 bash 或 zsh（在 macOS Catalina 及更高版本中，zsh 是默认的 shell），你可以按照以下步骤操作：
 
-### 对于 bash 用户
+### 对于 bash 用户：
 
 1. 打开你的 home 目录下的 `.bash_profile` 文件。如果你使用的是 Terminal.app，可以通过执行以下命令来编辑这个文件：
 
@@ -131,7 +143,7 @@ cloudflared access tcp --hostname smb.example.com --url localhost:8445
 
 3. 保存并关闭文件。下次你打开一个新的终端窗口时，这个命令将自动执行。
 
-### 对于 zsh 用户
+### 对于 zsh 用户：
 
 1. 打开你的 home 目录下的 `.zshrc` 文件。可以通过以下命令来编辑这个文件：
 
@@ -147,7 +159,7 @@ cloudflared access tcp --hostname smb.example.com --url localhost:8445
 
 3. 保存并关闭文件。下次你打开一个新的终端窗口时，这个命令将自动执行。
 
-### 注意
+### 注意：
 
 - 这种方法的一个潜在缺点是，每次你打开一个新的终端窗口或标签页时，这个命令都会执行。如果你希望它只在开机时运行一次，而不是每次打开终端时都运行，那么使用 `launchd` 或其他类似的系统级解决方案可能更合适。
 - 确保 `cloudflared` 命令的路径在你的 `$PATH` 环境变量中，或者在脚本中使用完整的路径。
@@ -190,6 +202,8 @@ touch ~/.bash_profile && open -e ~/.bash_profile
 
 记住，如果你的 macOS 使用的是 zsh 作为默认 shell（从 Catalina 开始是这样），修改 `.zshrc` 文件是更直接的方法。
 
+
+
 以上是gpt4给的方法 我照做后 实现了开机自启 如果想要开机自动挂载 需要再配合其他软件 这个自行去搜 蛮多的
 
 我用的这个：AutoMounter
@@ -204,6 +218,8 @@ smb://localhost:8445
 
 ![image-20240306034333439](https://i.darklotus.cn/images/2024/04/17/202404171653370.png)
 
+
+
 如果你跟我一样是微软账号密码登录的话就直接输入你的微软账号跟密码就行了
 
 出现smb映射的盘符表示成功
@@ -212,7 +228,11 @@ smb://localhost:8445
 
 ![image-20240306034506715](https://i.darklotus.cn/images/2024/04/17/202404171653404.png)
 
+
+
 教程结束 够细致吧？这都看不懂那我就没办法了
+
+
 
 最后吐槽一下cf内网穿透的这个速度 慢得要死 别指望传输什么大文件了 但是搭一个静态文件的网站还是很好使的 因为太过简单而且速度拉垮 所以我在这里不推荐大家使用 学这个主要还是给那些实在是没v4v6的用户一个机会 像调用moviepilot api接口这种 还是没啥问题的
 
