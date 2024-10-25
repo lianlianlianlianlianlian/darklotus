@@ -249,7 +249,7 @@ The theme is created by <a href="https://kuizuo.cn/">Kuizuo</a>
       {
         path: 'blog', // 博客路径
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/lianlianlianlianlianlian/darklotus/edit/main/${blogDirPath}/${blogPath}`, // 编辑链接
+          `https://github.com/lianlianlianlianlianlian/blog/edit/main/${blogDirPath}/${blogPath}`, // 编辑链接
         editLocalizedFiles: false, // 是否允许本地化文件编辑
         blogDescription: 'Lian的博客', // 博客描述
         blogSidebarCount: 10, // 侧边栏显示的博文数量
