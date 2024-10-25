@@ -1,5 +1,11 @@
 lian:
   name: Lian
-  title: ts full stack / Student
-  url: https://github.com/lianlianlianlianlianlian
-  image_url: /img/logo.png
+  title: 你好吗
+  url: /blog/authors/lian
+  image_url: https://darklotus.cn/img/logo.png
+  description: '耍起嘛耍起'
+  page: true # Turns the feature on
+  email: lian@darklotus.cn
+  socials:
+    x: dinglianlian
+    github: lianlianlianlianlianlian
