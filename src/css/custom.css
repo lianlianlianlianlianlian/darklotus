@@ -330,6 +330,7 @@ img {
   font-style: normal;
 }
 
-.navbar__title {
-  font-family: 'HuangKaihua', cursive; /* 使用自定义字体 */
+/* 仅在中文环境下应用自定义字体 */
+.navbar__title:lang(zh-CN) {
+  font-family: 'HuangKaihua', cursive; /* 中文字体 */
 }
