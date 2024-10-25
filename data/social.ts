@@ -22,11 +22,11 @@ const social: Social = {
   x: 'https://twitter.com/dinglianlian',
    //  juejin: 'https://juejin.cn/user/1565318510545901',
   wx: 'https://darklotus/img/wechat.png',
-  // qq: 'https://img.kuizuo.cn/qq.png',
+  // qq: 'https://img.darklotus.cn/qq.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
   cloudmusic: 'https://music.163.com/#/user/home?id=44878296',
   email: 'mailto:lian@darklotus.cn',
-  discord: 'https://discord.com/invite/xyqhsbmAg5',
+  discord: 'https://discord.com/invite/GUgw2cbssH',
 }
 
 const socialSet: Record<keyof Social | 'rss', SocialValue> = {
