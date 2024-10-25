@@ -315,9 +315,47 @@ div[class^='announcementBar_'] {
 }
 
 .footer {
-  background-color:#535353;
+  --footer-background: rgb(245, 245, 247);
+  font-size: 12px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+  background: var(--footer-background);
+  color: var(--footer-text-color);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
+.footer__link-item {
+  color: rgba(0, 0, 0, 0.72);
+  line-height: 2;
+  font-size: 14px;
+}
+
+.footer__title {
+  color: rgba(0, 0, 0, 0.88); 
+  font-size: 14px;
+  line-height: 1.3333733333;
+  font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 0em;
+  font-size: 15px;
+  line-height: 1.3333733333;
+}
+
+/* 深色模式下的页脚样式 */
+[data-theme="dark"] .footer {
+  background-color: rgb(49, 49, 49); /* 深色模式背景色 */
+  color: rgba(255, 255, 255, 0.88); /* 深色模式文本颜色 */
+}
+
+[data-theme="dark"] .footer__link-item {
+  color: rgba(255, 255, 255, 0.72); /* 深色模式链接颜色 */
+}
+
+[data-theme="dark"] .footer__title {
+  color: rgba(255, 255, 255, 0.88); /* 深色模式标题颜色 */
+}
 img {
   -webkit-user-drag: none; /* 禁用拖动 */
 }
