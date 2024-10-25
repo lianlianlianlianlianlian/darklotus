@@ -13,11 +13,9 @@ image: https://ubiq.co/tech-blog/wp-content/uploads/2020/12/nginx-increase-worke
 
 <!-- truncate -->
 
-
     set_real_ip_from 0.0.0.0/0;
     real_ip_header X-Forwarded-For;
 
 ![](https://oss.darklotus.cn/img/2024/10/18/202410180404862.png)
 
 在nginx的配置文件里 找个顺眼的地方插入就完事了
-
