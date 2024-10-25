@@ -234,7 +234,7 @@ The theme is created by <a href="https://kuizuo.cn/">Kuizuo</a>
         pwaHead: [
           { tagName: 'link', rel: 'icon', href: '/img/logo.png' }, // 网站图标
           { tagName: 'link', rel: 'manifest', href: '/manifest.json' }, // PWA manifest
-          { tagName: 'meta', name: 'theme-color', content: '#ff8080' }, // 主题颜色
+          { tagName: 'meta', name: 'theme-color', content: '#12affa' }, // 主题颜色
         ],
       },
     ],
