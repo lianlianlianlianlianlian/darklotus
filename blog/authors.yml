@@ -1,8 +1,10 @@
 lian:
   name: Lian
   title: 你好吗
-  url: https://github.com/lianlianlianlianlianlian
+  url: /blog/authors/lian
   image_url: https://darklotus.cn/img/logo.png
+  description: '耍起嘛耍起'
+  page: true # Turns the feature on
   email: lian@darklotus.cn
   socials:
     x: dinglianlian

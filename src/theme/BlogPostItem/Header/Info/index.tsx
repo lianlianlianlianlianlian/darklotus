@@ -8,7 +8,7 @@ import type { Props } from '@theme/BlogPostItem/Header/Info'
 import { Icon } from '@iconify/react'
 import Tag from '@site/src/theme/Tag'
 
-// Very simple pluralization: probably good enough for now
+// 用于处理复数形式的 Hook
 function useReadingTimePlural() {
   const { selectMessage } = usePluralForm()
   return (readingTimeFloat: number) => {
@@ -18,8 +18,6 @@ function useReadingTimePlural() {
       translate(
         {
           id: 'theme.blog.post.readingTime.plurals',
-          description:
-            'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
           message: 'One min read|{readingTime} min read',
         },
         { readingTime },
@@ -28,11 +26,13 @@ function useReadingTimePlural() {
   }
 }
 
+// 阅读时间组件
 export function ReadingTime({ readingTime }: { readingTime: number }) {
   const readingTimePlural = useReadingTimePlural()
   return <span className="truncate">{readingTimePlural(readingTime)}</span>
 }
 
+// 日期时间组件
 function DateTime({ date, formattedDate }: { date: string; formattedDate: string }) {
   return (
     <time dateTime={date} itemProp="datePublished" className="truncate">
@@ -43,7 +43,7 @@ function DateTime({ date, formattedDate }: { date: string; formattedDate: string
 
 export default function BlogPostItemHeaderInfo({ className }: Props): JSX.Element {
   const { metadata } = useBlogPost()
-  const { date, tags, readingTime } = metadata
+  const { date, tags, readingTime, authors } = metadata // 提取 authors 信息
 
   const tagsExists = tags.length > 0
 
@@ -86,6 +86,33 @@ export default function BlogPostItemHeaderInfo({ className }: Props): JSX.Elemen
         <div className="inline-flex items-center gap-1">
           <Icon icon="ri:time-line" />
           <ReadingTime readingTime={readingTime} />
+        </div>
+      )}
+      {authors && authors.length > 0 && ( // 检查 authors 信息并显示
+        <div className="inline-flex items-center gap-1">
+          <Icon icon="ri:user-line" />
+          <span className="truncate">
+            {authors.map((author, index) => (
+              <span key={author.url}>
+                <a
+                  href={author.url}
+                  className="author-link" // 使用 CSS 类
+                  style={{ color: 'inherit', textDecoration: 'none' }} // 默认样式
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#ff8080'; // 悬停时颜色
+                    e.currentTarget.style.textDecoration = 'underline'; // 悬停时下划线
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'inherit'; // 还原颜色
+                    e.currentTarget.style.textDecoration = 'none'; // 还原下划线
+                  }}
+                >
+                  {author.name}
+                </a>
+                {index < authors.length - 1 && ', '} {/* 在作者之间添加逗号 */}
+              </span>
+            ))}
+          </span>
         </div>
       )}
     </div>
