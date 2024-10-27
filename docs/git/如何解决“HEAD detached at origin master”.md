@@ -3,7 +3,7 @@ id: git-hdaom # 唯一ID
 slug: git-hdaom # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
 sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
 title: 如何解决“HEAD detached at origin master”
-description: 如何解决“HEAD detached at origin master”# 描述
+description: 如何解决“HEAD detached at origin master” # 描述
 date: 2021-10-01
 authors: lian
 tags: [git, github]
