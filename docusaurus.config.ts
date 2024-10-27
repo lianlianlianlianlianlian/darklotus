@@ -119,9 +119,9 @@ const config: Config = {
           title: '网站',
           items: [
             { label: '独立博客', to: 'https://blog.darklotus.cn' },
+            { label: '时光画廊', to: 'https://gallery.darklotus.cn' },
             { label: '动漫随机', to: 'https://img.darklotus.cn' },
             { label: '站点监控', to: 'https://status.darklotus.cn' },
-            { label: '随机图API', to: 'https://blog.darklotus.cn' },
           ],
         },
         {
