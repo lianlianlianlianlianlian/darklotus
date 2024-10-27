@@ -11,11 +11,6 @@ keywords: [git, github, ssh]
 
 ---
 
-
-description: 文档首页介绍 # 描述
-title: 文档介绍 # 页面标题
-sidebar_label: 文档介绍
-
 适用于大多数 Git 平台，包括 GitHub 和 Gitee。以下是对每个步骤的简要说明，以及它们在不同平台上的适用性：
 
 ### 1. 生成 SSH 密钥
