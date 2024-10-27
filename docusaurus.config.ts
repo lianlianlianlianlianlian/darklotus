@@ -99,9 +99,10 @@ const config: Config = {
         {
           title: '学习', // 页脚标题
           items: [
+            { label: '文档', to: 'docs' },
             { label: '博客', to: 'blog' },
-            { label: '归档', to: 'blog/archive' },
             { label: '项目', to: 'project' },
+            { label: '归档', to: 'blog/archive' },
           ],
         },
         {
@@ -117,7 +118,10 @@ const config: Config = {
         {
           title: '网站',
           items: [
+            { label: '独立博客', to: 'https://blog.darklotus.cn' },
+            { label: '动漫随机', to: 'https://img.darklotus.cn' },
             { label: '站点监控', to: 'https://status.darklotus.cn' },
+            { label: '随机图API', to: 'https://blog.darklotus.cn' },
           ],
         },
         {
@@ -136,20 +140,21 @@ const config: Config = {
       ],
 copyright: `
 <p style="margin-bottom: 0;">
-    <a href="http://beian.miit.gov.cn/" style="color: inherit;">${beian}</a>
+    <a href="http://beian.miit.gov.cn/" style="color: inherit;" target="_blank">${beian}</a>
 </p>
 <p style="display: inline-flex; align-items: center;">
     <img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/>
-    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(/\d+/)?.[0]}" style="color: inherit;">${beian1}</a>
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(/\d+/)?.[0]}" style="color: inherit;" target="_blank">${beian1}</a>
 </p>
 <p style="margin-bottom: 0;">
-    Illustration with <a href="https://www.shigureni.com/" style="color: inherit;">Shigureni</a>
+    Illustration with <a href="https://www.shigureni.com/" style="color: inherit;" target="_blank">Shigureni</a>
 </p>
 <p style="margin-bottom: 0;">
-    The theme is created by <a href="https://kuizuo.cn/" style="color: inherit;">Kuizuo</a>
+    The theme is created by <a href="https://kuizuo.cn/" style="color: inherit;" target="_blank">Kuizuo</a>
 </p>
-<p style="margin-top: 0; margin-bottom: 0;">Copyright © 2024 - ${new Date().getFullYear()} DarkLotus. | Built with Docusaurus.</p>
-
+<p style="margin-top: 0; margin-bottom: 0;">
+    Copyright © 2024 - ${new Date().getFullYear()} DarkLotus. | Built with Docusaurus.
+</p>
 `,
     },
     // Algolia 搜索配置（如果启用外部搜索）
