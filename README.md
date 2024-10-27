@@ -9,7 +9,7 @@ DarkLotusIndex
 
 ## 👋 介绍
 
-这里是DarkLotus，构建请fork原仓库！真的很不错！虽然我也是开源，但不建议拿我的上手，我不是专业维护者，我魔改后可能自己都不知道改了什么。
+这里是DarkLotus，构建请fork原仓库！真的很不错！虽然我也是开源，但不建议拿我的上手，我不是专业维护者，我魔改后可能自己都不知道改了什么,希望不要对你造成困扰。
 
 如果你想要搭建一个类似的站点，可直接 [Fork](https://github.com/kuizuo/blog/fork) 原仓库使用，或者通过 [StackBlitz](https://stackblitz.com/github/kuizuo/blog) 在线运行本项目，通过 [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/kuizuo/blog/tree/main&project-name=blog&repo-name=blog) 一键部署。
 
