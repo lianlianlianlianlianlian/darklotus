@@ -2,18 +2,17 @@
 id: git-ssh # 唯一ID
 slug: git-ssh # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
 sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
-title: git使用ssh密钥推送
-description: git使用ssh密钥推送教程 # 描述
+title: Git 配置SSH密钥
+description: Git 配置SSH密钥 # 描述
 date: 2021-10-01
 authors: lian
-tags: [git, github, ssh]
+tags: [git, github]
 keywords: [git, github, ssh]
 
 ---
 
-适用于大多数 Git 平台，包括 GitHub 和 Gitee。以下是对每个步骤的简要说明，以及它们在不同平台上的适用性：
+此方法适用于大多数 Git 平台，包括 GitHub 和 Gitee。以下是对每个步骤的简要说明，以及它们在不同平台上的适用性。
 
-### 1. 生成 SSH 密钥
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "lian@darklotus.cn"
@@ -62,4 +61,4 @@ git push -u origin main
 ### 总结
 
 - 使用 SSH 密钥推送代码的步骤在 GitHub 和 Gitee 中是类似的，都是通过 SSH 公钥进行认证，避免每次推送时输入用户名和密码的麻烦。
-- 只需注意在不同平台上可能会有些许界面差异，但整体流程是一致的。
+- Git平台允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到Git平台，就可以在每台电脑上往Git平台推送了。
