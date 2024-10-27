@@ -4,7 +4,7 @@ slug: git-accounts # URL(最多三级结构，便于seo 和理解，遵循doc/�
 sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
 title: 一台主机配置多个Git账号
 description: 一台主机配置多个Git账号 # 描述
-date: 2021-10-01
+date: 2024-10-27
 authors: lian
 tags: [git, github]
 keywords: [git, github]

@@ -4,7 +4,7 @@ slug: git-error # URL(最多三级结构，便于seo 和理解，遵循doc/资�
 sidebar_position: 10  # 控制该文档在侧边栏的显示顺序
 title: Git 常见错误总结
 description: Git 常见错误总结 # 描述
-date: 2021-10-01
+date: 2024-10-27
 authors: lian
 tags: [git, github]
 keywords: [git, github]
