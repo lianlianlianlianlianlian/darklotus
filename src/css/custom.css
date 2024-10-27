@@ -319,6 +319,10 @@ div[class^='announcementBar_'] {
   font-size: 13px; /* 字体大小 */
 }
 
+.footer__links {
+  margin-bottom: 2rem;
+}
+
 .footer__title {
   color: rgba(0, 0, 0, 0.88); /* 页脚标题颜色 */
   font-size: 14px; /* 字体大小 */
