@@ -21,8 +21,6 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-     // 侧边栏2
-
     // 其他文档可以继续添加
   ],
 };
