@@ -36,15 +36,31 @@
   "homepage.feature.title": {
     "message": "Feature"
   },
+
+
   "homepage.feature.developer": {
-    "message": "Typescript Developer"
+    "message": "Website Development"
   },
-  "homepage.feature.spider": {
-    "message": "Know a little Reverse"
+  "homepage.feature.developer.description": {
+    "message": "I am passionate about design and web development, turning ideas into reality while continuously improving my skills to create beautiful and functional projects."
   },
+
+  "homepage.feature.one": {
+    "message": "Ready Player One"
+  },
+
+  "homepage.feature.one.description": {
+    "message": "I enjoy experimenting with electronic devices and servers, exploring their potential and optimizing performance to deepen my understanding of technology."
+  },
+
   "homepage.feature.enthusiast": {
-    "message": "Open source enthusiast"
+    "message": "Open Source Enthusiast"
   },
+
+  "homepage.feature.enthusiast.description": {
+    "message": "As an open-source enthusiast, I actively contribute to the community and hope to create a well-known open-source project in my lifetim."
+  },
+
   "theme.blog.archive.posts.total": {
     "message": "Total {total} posts"
   },

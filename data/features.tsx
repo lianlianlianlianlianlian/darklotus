@@ -15,24 +15,30 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.developer',
-      message: '弟弟水平',
+      message: '设计开发',
     }),
     description: (
       <Translate>
-        作为一名弟弟，我始终秉持着“能让哥哥开心绝不让他担心”的原则，努力为大哥增添欢声笑语，创造温馨氛围，尽力成为大哥的小太阳。
+        {translate({
+          id: 'homepage.feature.developer.description',
+          message: '我热衷于设计作品和开发网站，喜欢将创意转化为实际的体验。通过不断学习新技术，努力提升自己的技能，创造出既美观又实用的网站和作品。',
+        })}
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
-   // icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
+    icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: translate({
-      id: 'homepage.feature.spider',
-      message: '装逼高手',
+      id: 'homepage.feature.one',
+      message: '头号玩家',
     }),
     description: (
       <Translate>
-        作为一名装逼高手，能轻易的分辨弟弟们拙劣的装逼手段，弟弟要在哥哥面前保持谦卑，只能在弟中弟面前装。懂？
+        {translate({
+          id: 'homepage.feature.one.description',
+          message: '我喜欢折腾各种新鲜玩具，探索它们的潜力。享受配置设备和优化性能的过程，这让我对技术有了更深入的理解，我不是头号玩家，谁是？',
+        })}
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,
@@ -44,7 +50,10 @@ const FEATURES: FeatureItem[] = [
     }),
     description: (
       <Translate>
-        作为一名开源爱好者，积极参与开源社区，为开源项目贡献代码，希望有生之年能够构建出一个知名的开源项目，但目前只会改别人的开源代码。
+        {translate({
+          id: 'homepage.feature.enthusiast.description',
+          message: '作为一名开源爱好者，积极参与开源社区，为开源项目贡献代码，希望有生之年能够构建出一个知名的开源项目，但目前只会改别人的开源代码。',
+        })}
       </Translate>
     ),
     header: <OpenSourceSvg className={'h-auto w-full'} height={150} role="img" />,
