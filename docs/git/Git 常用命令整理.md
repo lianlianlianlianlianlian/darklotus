@@ -1,7 +1,7 @@
 ---
 id: git-cmd # 唯一ID
-slug: git-cmd # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
+slug: cmd # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
+sidebar_position: 20  # 控制该文档在侧边栏的显示顺序
 title: Git 常用命令整理
 description: Git 常用命令整理 # 描述
 date: 2024-10-27

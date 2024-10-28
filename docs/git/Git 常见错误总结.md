@@ -1,6 +1,6 @@
 ---
 id: git-error # 唯一ID
-slug: git-error # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
+slug: error # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
 sidebar_position: 10  # 控制该文档在侧边栏的显示顺序
 title: Git 常见错误总结
 description: Git 常见错误总结 # 描述

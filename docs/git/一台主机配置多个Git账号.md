@@ -1,6 +1,6 @@
 ---
 id: git-accounts # 唯一ID
-slug: git-accounts # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
+slug: accounts # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
 sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
 title: 一台主机配置多个Git账号
 description: 一台主机配置多个Git账号 # 描述

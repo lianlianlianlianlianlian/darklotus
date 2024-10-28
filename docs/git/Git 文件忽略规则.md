@@ -1,7 +1,7 @@
 ---
 id: git-gitignore # 唯一ID
-slug: git-gitignore # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+slug: gitignore # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
+sidebar_position: 20  # 控制该文档在侧边栏的显示顺序
 title: Git 文件忽略规则
 description: Git 文件忽略规则 # 描述
 date: 2024-10-27
