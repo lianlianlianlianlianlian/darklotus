@@ -26,7 +26,7 @@ const FEATURES: FeatureItem[] = [
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
-    icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
+    icon: <Icon icon="icon-park:bydesign" className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: translate({
@@ -37,11 +37,12 @@ const FEATURES: FeatureItem[] = [
       <Translate>
         {translate({
           id: 'homepage.feature.one.description',
-          message: '我喜欢折腾各种新鲜玩具，探索它们的潜力。享受配置设备和优化性能的过程，这让我对技术有了更深入的理解，我不是头号玩家，谁是？',
+          message: '我喜欢折腾各种新奇玩具，探索它们的潜力。享受配置设备和优化性能的过程，这让我对技术有了更深入的理解，我不是头号玩家，谁是？',
         })}
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,
+    icon: <Icon icon="icon-park:game-two" className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: translate({
@@ -57,6 +58,8 @@ const FEATURES: FeatureItem[] = [
       </Translate>
     ),
     header: <OpenSourceSvg className={'h-auto w-full'} height={150} role="img" />,
+  //  icon: <Icon icon="icon-park:gitlab" className="h-4 w-4 text-neutral-500" />, 
+    icon: <Icon icon="vscode-icons:file-type-vscode-test" className="h-4 w-4 text-neutral-500" />,
   },
 ]
 
