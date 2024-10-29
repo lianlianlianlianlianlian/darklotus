@@ -5,6 +5,7 @@ import Tooltip from '@site/src/components/Tooltip';
 import { MagicCard } from '@site/src/components/magicui/magic-card';
 import { cn } from '@site/src/lib/utils';
 import Image from '@theme/IdealImage';
+import { Icon } from '@iconify/react'; // 导入 Iconify 组件
 import React, { memo } from 'react';
 import styles from './styles.module.css';
 
@@ -44,15 +45,15 @@ const ShowcaseCard = memo(({ project }: { project: Project }) => {
             <Link href={project.website}>{project.title}</Link>
           </h4>
           
-          {/* 使用自定义的 emoji 图标 */}
-          <span className={styles.emojiIcon}>{project.emoji}</span>
+          {/* 使用自定义图标大小 */}
+          <Icon icon={project.icon} style={{ fontSize: project.iconSize }} className="text-neutral-500" />
 
-          {project.button && project.source && ( // 添加条件检查
+          {project.button && project.source && (
             <Link
               href={project.source}
               className={cn('button button--secondary button--sm', styles.showcaseCardSrcBtn)}
             >
-              {project.button} {/* 渲染自定义按钮文本 */}
+              {project.button}
             </Link>
           )}
         </div>

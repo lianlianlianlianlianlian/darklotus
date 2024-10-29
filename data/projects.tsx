@@ -8,7 +8,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '源码', // 自定义按钮文本
-    emoji: '💗', // 自定义 emoji 图标
+    icon: 'noto:lotus', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
 
   {
@@ -20,7 +21,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '官网', // 自定义按钮文本
-    emoji: '🚀', // 自定义 emoji 图标
+    icon: 'logos:blogger', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
 
   {
@@ -32,7 +34,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '源码', // 自定义按钮文本
-    emoji: '🎉', // 自定义 emoji 图标
+    icon: 'logos:google-bard-icon', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
 
   {
@@ -44,7 +47,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '官网', // 自定义按钮文本
-    emoji: '📷', // 自定义 emoji 图标
+    icon: 'logos:chevereto', // 新增 icon 属性
+    iconSize: '12px', // 自定义图标大小
   },
 
   {
@@ -56,7 +60,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '源码', // 自定义按钮文本
-    emoji: '📷', // 自定义 emoji 图标
+    icon: 'pixelarticons:image-plus', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
 
   {
@@ -68,7 +73,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '开源', // 自定义按钮文本
-    emoji: '🚀', // 自定义 emoji 图标
+    icon: 'logos:bluesky', // 新增 icon 属性
+    iconSize: '18px', // 自定义图标大小
   },
 
   {
@@ -80,7 +86,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
     button: '开源', // 自定义按钮文本
-    emoji: '🎞', // 自定义 emoji 图标
+    icon: 'logos:lit-icon', // 新增 icon 属性
+    iconSize: '18px', // 自定义图标大小
   },
 
   // toy
@@ -93,7 +100,8 @@ export const projects: Project[] = [
     tags: ['favorite'],
     type: 'toy',
     button: '设备', // 自定义按钮文本
-    emoji: '💻', // 自定义 emoji 图标
+    icon: 'logos:apple', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
   
  // personal
@@ -106,7 +114,8 @@ export const projects: Project[] = [
     tags: ['favorite'],
     type: 'personal',
     button: '设备', // 自定义按钮文本
-    emoji: '💥', // 自定义 emoji 图标
+    icon: 'simple-icons:synology', // 新增 icon 属性
+    iconSize: '60px', // 自定义图标大小
   },
  
   
@@ -118,6 +127,8 @@ export const projects: Project[] = [
     tags: ['opensource', 'personal'],
     type: 'other',
     button: '编辑', // 添加按钮文本
+    icon: 'arcticons:synology-assistant', // 新增 icon 属性
+    iconSize: '20px', // 自定义图标大小
   },
 
 ]
