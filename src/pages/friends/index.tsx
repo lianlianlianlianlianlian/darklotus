@@ -14,7 +14,7 @@ const TITLE = translate({
 })
 const DESCRIPTION = translate({
   id: 'theme.friends.description',
-  message: '妈的！最烦装逼的人！',
+  message: '倾听、学习，并分享自己的见解，保持谦虚，而不是一味地展示自己',
 })
 const ADD_FRIEND_URL = 'https://github.com/lianlianlianlianlianlian/darklotus/edit/main/data/friends.tsx'
 const SITE_INFO = `
