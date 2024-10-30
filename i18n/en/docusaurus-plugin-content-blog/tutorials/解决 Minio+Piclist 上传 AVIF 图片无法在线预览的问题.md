@@ -8,7 +8,7 @@ keywords: [Tutorial]
 image: https://oss.darklotus.cn/img/2024/10/16/202410162053664.png
 ---
 
-Setting up Piclist with Mini can solve the issue of AVIF images uploaded to Minio not being previewed online.
+Setting up Piclist with MIME can solve the issue of AVIF images uploaded to Minio not being previewed online.
 
 <!-- truncate -->
 

@@ -8,7 +8,7 @@ keywords: [Minio,Piclist,Avif,教程]
 image: https://oss.darklotus.cn/img/2024/10/16/202410162053664.png
 ---
 
-Piclist设置Mini即可解决Minio上传 AVIF 图片无法在线预览的问题
+Piclist 设置 MIME 即可解决Minio上传 AVIF 图片无法在线预览的问题
 
 <!-- truncate -->
 
