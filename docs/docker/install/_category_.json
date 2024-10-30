@@ -1,7 +1,8 @@
 {
   "label": "Docker 安装",
-  "position": 2,
+  "position": 3,
   "link": {
-    "href": "/docs/docker/install"
+    "type": "generated-index",
+    "description": "Docker 安装教程"
   }
 }

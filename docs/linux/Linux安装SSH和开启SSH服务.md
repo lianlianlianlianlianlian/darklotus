@@ -1,15 +1,4 @@
----
-id: linux-ssh # 唯一ID
-slug: ssh # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
-title: Linux安装ssh和开启ssh服务
-description: Linux安装ssh和开启ssh服务 # 描述
-date: 2024-10-27
-authors: lian
-tags: [sver,linux,ssh]
-keywords: [dsver,linux,ssh]
 
----
 折腾ubuntu老是遇到默认没有ssh 于是有了这篇学习笔记
 
 
