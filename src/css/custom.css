@@ -176,7 +176,7 @@ article p > span > a {
 }
 
 .navbar-sidebar__items {
-  height: calc(100% - var(--ifm-navbar-height) - 444px); /* 计算侧边栏高度 */
+  height: calc(120% - var(--ifm-navbar-height) - 444px); /* 计算侧边栏高度 */
 }
 
 @media (max-width: 570px) {
