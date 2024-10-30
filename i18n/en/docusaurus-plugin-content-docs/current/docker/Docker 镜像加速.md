@@ -1,51 +1,50 @@
 ---
-id: docker-rush # 唯一ID
-slug: rush # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
-title: Docker 镜像加速
-description: Docker 镜像加速 # 描述
+id: docker-rush 
+slug: rush 
+sidebar_position: 100 
+title: Docker Image Acceleration
+description: Docker image acceleration 
+sidebar_label: Docker Image Acceleration
 date: 2024-10-27
 authors: lian
 tags: [docker]
 keywords: [docker]
 
 ---
-## 独享加速
+## Exclusive Acceleration
 
-本站提供的镜像加速地址：https://docker.kisskiss.store
+The image acceleration address provided by this site: https://docker.kisskiss.store
 
-- 为爱发电 低调使用 切勿宣传！
-- 本站不会对此服务收取任何费用！ 
-- 好的开源环境需要大家共同维护！
-- 本站不为任何使用此加速服务的用户行为负责！
-- 使用则代表你接受以上条款！
+- This is a labor of love. Please use it discreetly and do not promote it!
+- This site will not charge any fees for this service!
+- A good open-source environment requires everyone's joint maintenance!
+- This site will not be responsible for any actions of users who use this acceleration service!
+- Using it means you accept the above terms!
 
-## 国内大厂服务商
-* [阿里云加速器(点击管理控制台 -> 登录账号(淘宝账号) -> 左侧镜像工具 -> 镜像加速器 -> 复制加速器地址)](https://cr.console.aliyun.com/cn-hangzhou/instances)
-* [网易云加速器 `https://hub-mirror.c.163.com`](https://www.163yun.com/help/documents/56918246390157312)
-* [百度云加速器 `https://mirror.baidubce.com`](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#%E4%BD%BF%E7%94%A8dockerhub%E5%8A%A0%E9%80%9F%E5%99%A8)
+## Domestic Major Service Providers
+* [Alibaba Cloud Accelerator (Click on the Management Console -> Log in to your account (Taobao account) -> On the left side, select Image Tools -> Image Accelerator -> Copy the accelerator address)](https://cr.console.aliyun.com/cn-hangzhou/instances)
+* [NetEase Cloud Accelerator `https://hub-mirror.c.163.com`](https://www.163yun.com/help/documents/56918246390157312)
+* [Baidu Cloud Accelerator `https://mirror.baidubce.com`](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#UsingDockerHubAccelerator)
 
-> 国内各大云服务商（腾讯云、阿里云、百度云）均提供了 Docker 镜像加速服务，建议根据运行 Docker 的云平台选择对应的镜像加速服务，具体请参考本页最后一小节。
+> Domestic major cloud service providers (Tencent Cloud, Alibaba Cloud, Baidu Cloud) all provide Docker image acceleration services. It is recommended to select the corresponding image acceleration service according to the cloud platform on which Docker is running. For specific details, please refer to the last subsection of this page.
 
+## Configuration Methods
 
+We will take the [NetEase Cloud](https://www.163yun.com/) image service `https://hub-mirror.c.163.com` as an example for introduction.
 
-## 配置方法
+### Ubuntu 16.04+, Debian 8+, CentOS 7+
 
-我们以 [网易云](https://www.163yun.com/) 镜像服务 `https://hub-mirror.c.163.com` 为例进行介绍。
+Currently, mainstream Linux distributions have all adopted [systemd](https://systemd.io/) for service management. Here is how to configure the image accelerator in Linux distributions that use systemd.
 
-### Ubuntu 16.04+、Debian 8+、CentOS 7+
-
-目前主流 Linux 发行版均已使用 [systemd](https://systemd.io/) 进行服务管理，这里介绍如何在使用 systemd 的 Linux 发行版中配置镜像加速器。
-
-请首先执行以下命令，查看是否在 `docker.service` 文件中配置过镜像地址。
+Please first execute the following command to check whether the image address has been configured in the `docker.service` file.
 
 ```bash
-$ systemctl cat docker | grep '\-\-registry\-mirror'
+$ systemctl cat docker | grep '--registry-mirror'
 ```
 
-如果该命令有输出，那么请执行 `$ systemctl cat docker` 查看 `ExecStart=` 出现的位置，修改对应的文件内容去掉 `--registry-mirror` 参数及其值，并按接下来的步骤进行配置。
+If the command has an output, then please execute `$ systemctl cat docker` to find the position where `ExecStart=` appears, modify the corresponding file content to remove the `--registry-mirror` parameter and its value, and then follow the next steps for configuration.
 
-如果以上命令没有任何输出，那么就可以在 `/etc/docker/daemon.json` 中写入如下内容（如果文件不存在请新建该文件）：
+If the above command has no output, then you can write the following content in `/etc/docker/daemon.json` (if the file does not exist, please create it anew):
 
 ```json
 {
@@ -56,9 +55,9 @@ $ systemctl cat docker | grep '\-\-registry\-mirror'
 }
 ```
 
-> 注意，一定要保证该文件符合 json 规范，否则 Docker 将不能启动。
+> Note that you must ensure that the file complies with the JSON specification; otherwise, Docker will not be able to start.
 
-之后重新启动服务。
+After that, restart the service.
 
 ```bash
 $ sudo systemctl daemon-reload
@@ -67,7 +66,7 @@ $ sudo systemctl restart docker
 
 ### Windows 10
 
-对于使用 `Windows 10` 的用户，在任务栏托盘 Docker 图标内右键菜单选择 `Settings`，打开配置窗口后在左侧导航菜单选择 `Docker Engine`，在右侧像下边一样编辑 json 文件，之后点击 `Apply & Restart` 保存后 Docker 就会重启并应用配置的镜像地址了。
+For users using `Windows 10`, right-click on the Docker icon in the taskbar tray and select `Settings` from the menu. After opening the configuration window, select `Docker Engine` from the left navigation menu. On the right side, edit the JSON file as shown below, and then click `Apply & Restart`. Docker will restart and apply the configured image address.
 
 ```json
 {
@@ -80,7 +79,7 @@ $ sudo systemctl restart docker
 
 ### macOS
 
-对于使用 macOS 的用户，在任务栏点击 Docker Desktop 应用图标 -> `Settings...`，在左侧导航菜单选择 `Docker Engine`，在右侧像下边一样编辑 json 文件。修改完成之后，点击 `Apply & restart` 按钮，Docker 就会重启并应用配置的镜像地址了。
+For users using macOS, click on the Docker Desktop application icon on the taskbar -> `Settings...`. In the left navigation menu, select `Docker Engine`. On the right side, edit the JSON file as shown below. After the modification is completed, click the `Apply & restart` button. Docker will restart and apply the configured image address.
 
 ```json
 {
@@ -91,22 +90,22 @@ $ sudo systemctl restart docker
 }
 ```
 
-## 检查加速器是否生效
+## Checking if the Accelerator Is Effective
 
-执行 `$ docker info`，如果从结果中看到了如下内容，说明配置成功。
+Execute `$ docker info`. If you see the following content in the result, it means the configuration is successful.
 
 ```bash
 Registry Mirrors:
  https://hub-mirror.c.163.com/
 ```
 
-## `k8s.gcr.io` 镜像
+## `k8s.gcr.io` Images
 
-可以登录 [阿里云 容器镜像服务](https://www.aliyun.com/product/acr?source=5176.11533457&userCode=8lx5zmtu&type=copy) **镜像中心** -> **镜像搜索** 查找。
+You can log in to the [Alibaba Cloud Container Image Service](https://www.aliyun.com/product/acr?source=5176.11533457&userCode=8lx5zmtu&type=copy) **Image Center** -> **Image Search** to search.
 
-例如 `k8s.gcr.io/coredns:1.6.7` 镜像可以用 `registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.6.7` 代替。
+For example, the `k8s.gcr.io/coredns:1.6.7` image can be replaced by `registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.6.7`.
 
-一般情况下有如下对应关系：
+In general, there is the following correspondence:
 
 ```bash
 # $ docker pull k8s.gcr.io/xxx
@@ -114,20 +113,20 @@ Registry Mirrors:
 $ docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/xxx
 ```
 
-## 不再提供服务的镜像
+## Images No Longer in Service
 
-某些镜像不再提供服务，添加无用的镜像加速器，会拖慢镜像拉取速度，你可以从镜像配置列表中删除它们。
+Some images are no longer in service. Adding useless image accelerators will slow down the image pulling speed. You can remove them from the image configuration list.
 
-* https://dockerhub.azk8s.cn **已转为私有**
+* https://dockerhub.azk8s.cn **Has been made private**
 * https://reg-mirror.qiniu.com
 * https://registry.docker-cn.com
 
-建议 **watch（页面右上角）** [镜像测试](https://github.com/docker-practice/docker-registry-cn-mirror-test) 这个 GitHub 仓库，我们会在此更新各个镜像地址的状态。
+It is recommended to **watch (in the upper right corner of the page)** the [Docker Registry CN Mirror Test](https://github.com/docker-practice/docker-registry-cn-mirror-test) GitHub repository. We will update the status of each image address here.
 
-## 云服务商
+## Cloud Service Providers
 
-某些云服务商提供了 **仅供内部** 访问的镜像服务，当您的 Docker 运行在云平台时可以选择它们。
+Some cloud service providers offer image services that are **for internal use only**. You can choose them when your Docker is running on a cloud platform.
 
-* [Azure 中国镜像 `https://dockerhub.azk8s.cn`](https://github.com/Azure/container-service-for-azure-china/blob/master/aks/README.md#22-container-registry-proxy)
+* [Azure China Image `https://dockerhub.azk8s.cn`](https://github.com/Azure/container-service-for-azure-china/blob/master/aks/README.md#22-container-registry-proxy)
 
-* [腾讯云 `https://mirror.ccs.tencentyun.com`](https://cloud.tencent.com/act/cps/redirect?redirect=10058&cps_key=3a5255852d5db99dcd5da4c72f05df61)
+* [Tencent Cloud `https://mirror.ccs.tencentyun.com`](https://cloud.tencent.com/act/cps/redirect?redirect=10058&cps_key=3a5255852d5db99dcd5da4c72f05df61)
