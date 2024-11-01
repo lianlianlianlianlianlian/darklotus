@@ -125,6 +125,15 @@ const config: Config = {
           ],
         },
         {
+          title: '声明',
+          items: [
+            { label: '用户协议', to: '/agreement' },
+            { label: '隐私政策', to: '/privacy' },
+            { label: '版权声明', to: '/copyright' },
+            { label: 'Cookies', to: '/cookies' },
+          ],
+        },
+        {
           title: '更多',
           items: [
             { label: '友链', position: 'right', to: 'friends' },
