@@ -1,15 +1,21 @@
 ---
-id: docker-info # 唯一ID
-slug: info # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
+id: docker-info 
+slug: info 
+sidebar_position: 1  
 title: Docker 是什么
-description: Docker 是什么 # 描述
+description: Docker 是什么 
 date: 2024-10-27
 authors: lian
 tags: [docker]
-keywords: [docker]
-
+image: https://i.imgur.com/mErPwqL.png  
+keywords:                            
+  - Docker 
+  - Docker 是什么 
+last_update:                          
+  date: 2024-11-2 00:00                   
+  author: Lian          #
 ---
+
 
 # 什么是 Docker
 
