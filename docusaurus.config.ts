@@ -214,6 +214,14 @@ copyright: `
         docs: {
           path: 'docs', // 文档路径
           sidebarPath: 'sidebars.ts', // 侧边栏配置
+          showLastUpdateAuthor: true,  // 显示最后更新作者
+          showLastUpdateTime: true,     // 显示最后更新时间
+          includeCurrentVersion: true,   // 包含当前版本
+          breadcrumbs: true,             // 启用面包屑导航
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+           editUrl:
+             'https://github.com/lianlianlianlianlianlian/darklotus/tree/main',
         },
         blog: false, // 是否启用博客功能
         theme: {
