@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - run: corepack enable
 
@@ -38,7 +38,7 @@ jobs:
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/darklotus.cn/index'
         with:
-          script: |
+          SCRIPT_AFTER: |
             cd /www/wwwroot/darklotus.cn/index
             pnpm install  # 确保在服务器上安装依赖
             pnpm build
