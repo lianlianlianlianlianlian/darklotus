@@ -88,33 +88,34 @@ export default function BlogPostItemHeaderInfo({ className }: Props): JSX.Elemen
           <ReadingTime readingTime={readingTime} />
         </div>
       )}
-      {authors && authors.length > 0 && ( // 检查 authors 信息并显示
-        <div className="inline-flex items-center gap-1">
-          <Icon icon="ri:user-line" />
-          <span className="truncate">
-            {authors.map((author, index) => (
-              <span key={author.url}>
-                <a
-                  href={author.url}
-                  className="author-link" // 使用 CSS 类
-                  style={{ color: 'inherit', textDecoration: 'none' }} // 默认样式
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#ff8080'; // 悬停时颜色
-                    e.currentTarget.style.textDecoration = 'underline'; // 悬停时下划线
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'inherit'; // 还原颜色
-                    e.currentTarget.style.textDecoration = 'none'; // 还原下划线
-                  }}
-                >
-                  {author.name}
-                </a>
-                {index < authors.length - 1 && ', '} {/* 在作者之间添加逗号 */}
-              </span>
-            ))}
-          </span>
-        </div>
-      )}
+      {authors &&
+        authors.length > 0 && ( // 检查 authors 信息并显示
+          <div className="inline-flex items-center gap-1">
+            <Icon icon="ri:user-line" />
+            <span className="truncate">
+              {authors.map((author, index) => (
+                <span key={author.url}>
+                  <a
+                    href={author.url}
+                    className="author-link" // 使用 CSS 类
+                    style={{ color: 'inherit', textDecoration: 'none' }} // 默认样式
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = '#ff8080' // 悬停时颜色
+                      e.currentTarget.style.textDecoration = 'underline' // 悬停时下划线
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = 'inherit' // 还原颜色
+                      e.currentTarget.style.textDecoration = 'none' // 还原下划线
+                    }}
+                  >
+                    {author.name}
+                  </a>
+                  {index < authors.length - 1 && ', '} {/* 在作者之间添加逗号 */}
+                </span>
+              ))}
+            </span>
+          </div>
+        )}
     </div>
   )
 }

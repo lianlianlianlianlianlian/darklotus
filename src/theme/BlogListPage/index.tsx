@@ -67,7 +67,12 @@ function BlogListPageContent(props: Props) {
       <h2 className="h2 mb-4 flex items-center justify-center text-center">
         <Translate id="theme.blog.title.new">博客</Translate>
       </h2>
-      <p className="mb-4 text-center"> <a href="https://Blog.DarkLotus.CN" target="_blank">Blog.DarkLotus.CN</a></p>
+      <p className="mb-4 text-center">
+        {' '}
+        <a href="https://Blog.DarkLotus.CN" target="_blank">
+          Blog.DarkLotus.CN
+        </a>
+      </p>
       <ViewTypeSwitch viewType={viewType} toggleViewType={toggleViewType} />
       <div className="row">
         <div className={'col col--12'}>

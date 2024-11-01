@@ -1,11 +1,11 @@
+import Link from '@docusaurus/Link'
+import { translate } from '@docusaurus/Translate'
+import { Friend, Friends } from '@site/data/friends'
+import Comment from '@site/src/components/Comment'
 import CodeBlock from '@theme/CodeBlock'
 import Layout from '@theme/Layout'
-import { memo, useRef, useState } from 'react'
-import Comment from '@site/src/components/Comment'
-import { Friend, Friends } from '@site/data/friends'
-import { translate } from '@docusaurus/Translate'
-import Link from '@docusaurus/Link'
 import { motion } from 'framer-motion'
+import { memo, useRef, useState } from 'react'
 import styles from './styles.module.css'
 
 const TITLE = translate({
@@ -35,7 +35,7 @@ function SiteInfo() {
   )
 }
 
-function FriendHeader({ onApplyClick, showFooter }: { onApplyClick: () => void, showFooter: boolean }) {
+function FriendHeader({ onApplyClick, showFooter }: { onApplyClick: () => void; showFooter: boolean }) {
   return (
     <section className="margin-top--lg margin-bottom--lg text-center">
       <h1>{TITLE}</h1>

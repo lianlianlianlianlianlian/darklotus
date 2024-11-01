@@ -40,7 +40,11 @@ export default function Github({ className }: GithubProps) {
             }}
           />
         </div>
-        <GitHubCalendar username="lianlianlianlianlianlian" blockSize={11} colorScheme={isDarkTheme ? 'dark' : 'light'} />
+        <GitHubCalendar
+          username="lianlianlianlianlianlian"
+          blockSize={11}
+          colorScheme={isDarkTheme ? 'dark' : 'light'}
+        />
       </div>
     </div>
   )
