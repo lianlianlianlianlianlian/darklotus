@@ -1,51 +1,47 @@
-name: 部署到 GitHub Pages
+name: CI
 
 on:
   push:
     branches:
       - main
-    # 如果你想要进一步定义触发、路径以及其他内容，请检阅 Github Actions 文档
-    # https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
-  build:
-    name: 构建 Docusaurus
-    runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        node: [18]
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set node version to ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: yarn
+          node-version: ${{ matrix.node-version }}
 
-      - name: 安装依赖
-        run: pnpm install --frozen-lockfile
-      - name: 构建网站
-        run: npm build
+      - run: corepack enable
 
-      - name: 上传构建制品
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
+      - name: Setup
+        run: npm i -g @antfu/ni
 
-  deploy:
-    name: 部署到 GitHub Pages
-    needs: build
+      - name: Install
+        run: nci
 
-    # 给予 GITHUB_TOKEN 进行 Pages 部署所必须的权限
-    permissions:
-      pages: write # 以部署到 Pages
-      id-token: write # 以验证部署来自恰当的源
+      - name: Build
+        run: nr build
 
-    # 部署到 Github Pages 环境
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      - name: Lint
+        run: nr lint
 
-    runs-on: ubuntu-latest
-    steps:
-      - name: 部署到 GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v4.1.10
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '-avzr --delete'
+          SOURCE: 'build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/opt/1panel/apps/openresty/openresty/www/sites/kuizuo.cn/index'
