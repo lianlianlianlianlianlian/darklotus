@@ -20,7 +20,7 @@ jobs:
       - run: corepack enable
 
       - name: Install dependencies
-        run: npm install -g @antfu/ni
+        run: npm install
 
       - name: Build
         run: npm run build
@@ -40,4 +40,5 @@ jobs:
         with:
           script: |
             cd /www/wwwroot/darklotus.cn/index
+            pnpm install  # 确保在服务器上安装依赖
             pnpm build
