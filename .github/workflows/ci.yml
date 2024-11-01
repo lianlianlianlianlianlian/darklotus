@@ -44,5 +44,5 @@ jobs:
           SOURCE: 'build'
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
-          TARGET: '/www/wwwroot/darklotus.cn/'
+          TARGET: '/www/wwwroot/darklotus.cn/index'
           
