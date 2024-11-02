@@ -37,6 +37,11 @@ const config: Config = {
     //   content: ``,
     // },
     // Open Graph 图像
+    colorMode: {
+      defaultMode: 'dark',  // 默认模式设为 'dark'
+      disableSwitch: false,  // 设置为 false 时，Docusaurus 会在页面顶部的导航栏中显示一个明暗模式切换开关，用户可以手动切换页面的主题（比如从浅色切换到深色，或反之）。
+      respectPrefersColorScheme: true,  // 自动检测用户的系统颜色偏好
+    },
     image: 'img/og.png',
     // 元数据
     metadata: [
