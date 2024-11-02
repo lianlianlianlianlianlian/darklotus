@@ -39,10 +39,16 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
           if (hideOnScroll) {
             requestAnimationFrame(() => {
               if (wheelDirection.current === -1) {
-                if (navbar.current) navbar.current.style.opacity = '1' // 显示导航栏
+                if (navbar.current) {
+                  navbar.current.style.opacity = '1' // 显示导航栏
+                  navbar.current.style.pointerEvents = 'auto' // 启用点击
+                }
                 displayLock.current = true
               } else {
-                if (navbar.current) navbar.current.style.opacity = '0' // 隐藏导航栏
+                if (navbar.current) {
+                  navbar.current.style.opacity = '0' // 隐藏导航栏
+                  navbar.current.style.pointerEvents = 'none' // 禁用点击
+                }
                 displayLock.current = false
               }
             })
@@ -54,11 +60,20 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
 
           requestAnimationFrame(() => {
             if (scrollTop === 0) {
-              if (navbar.current) navbar.current.style.opacity = '1' // 到顶部时显示导航栏
+              if (navbar.current) {
+                navbar.current.style.opacity = '1' // 到顶部时显示导航栏
+                navbar.current.style.pointerEvents = 'auto' // 启用点击
+              }
             } else if (scrollTop > lastScrollTop.current && !displayLock.current) {
-              if (navbar.current) navbar.current.style.opacity = '0' // 向下滚动时隐藏导航栏
+              if (navbar.current) {
+                navbar.current.style.opacity = '0' // 向下滚动时隐藏导航栏
+                navbar.current.style.pointerEvents = 'none' // 禁用点击
+              }
             } else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) {
-              if (navbar.current) navbar.current.style.opacity = '0' // 非滚轮触发时隐藏导航栏
+              if (navbar.current) {
+                navbar.current.style.opacity = '0' // 非滚轮触发时隐藏导航栏
+                navbar.current.style.pointerEvents = 'none' // 禁用点击
+              }
             }
 
             lastScrollTop.current = scrollTop
@@ -73,7 +88,10 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
           window.addEventListener('scroll', handleScroll)
           window.addEventListener('click', () => {
             if (displayLock.current) {
-              if (navbar.current) navbar.current.style.opacity = '0' // 点击时隐藏导航栏
+              if (navbar.current) {
+                navbar.current.style.opacity = '0' // 点击时隐藏导航栏
+                navbar.current.style.pointerEvents = 'none' // 禁用点击
+              }
               displayLock.current = false
             }
           })
@@ -99,7 +117,7 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
                 'navbar-sidebar--show': mobileSidebar.shown,
               },
             )}
-            style={{ transition: 'opacity 0.3s ease-in-out' }} // 过渡效果
+            style={{ transition: 'opacity 0.3s ease-in-out, pointer-events 0.3s ease-in-out' }} // 添加过渡效果
           >
             {children}
             <NavbarBackdrop onClick={mobileSidebar.toggle} />
