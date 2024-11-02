@@ -37,8 +37,15 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/darklotus.cn/index'
-        with:
-          SCRIPT_AFTER: |
-            cd /www/wwwroot/darklotus.cn/index
-            pnpm install  # 确保在服务器上安装依赖
-            pnpm build
+
+            
+      - name: SSH Deploy to Server 2
+        uses: easingthemes/ssh-deploy@v4.1.10
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_SERVER_2 }}
+          ARGS: '-avzr --delete'
+          SOURCE: 'build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SERVER_2 }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/darklotus.cn/index'
+
