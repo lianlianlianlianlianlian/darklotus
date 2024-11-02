@@ -37,14 +37,16 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
           wheelDirection.current = e.deltaY > 0 ? 1 : -1
           triggeredByWheel.current = true
 
-          // 向上滚动且导航栏隐藏时显示导航栏并锁定显示状态
-          if (hideOnScroll && wheelDirection.current === -1) {
-            navbar.current?.classList.remove(styles.navbarHidden)
+          // 仅在导航栏隐藏时触发显示锁定
+          if (
+            hideOnScroll &&
+            wheelDirection.current === -1 &&
+            navbar.current?.classList.contains(styles.navbarHidden)
+          ) {
+            navbar.current.classList.remove(styles.navbarHidden)
             displayLock.current = true // 锁定显示状态
-          }
-          // 向下滚动时隐藏导航栏并解除显示锁定
-          else if (hideOnScroll && wheelDirection.current === 1) {
-            navbar.current?.classList.add(styles.navbarHidden)
+          } else if (hideOnScroll && wheelDirection.current === 1) {
+            navbar.current.classList.add(styles.navbarHidden)
             displayLock.current = false // 解除锁定
           }
         }
@@ -65,11 +67,11 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
           if (scrollTop === 0) {
             navbar.current?.classList.remove(styles.navbarHidden)
           }
-          // 如果向下滚动或未锁定显示状态，隐藏导航栏
+          // 如果向下滚动且未锁定显示状态，隐藏导航栏
           else if (scrollTop > lastScrollTop.current && !displayLock.current) {
             navbar.current?.classList.add(styles.navbarHidden)
           }
-          // 非滚轮触发且未锁定时，隐藏导航栏
+          // 向上滚动时显示导航栏
           else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) {
             navbar.current?.classList.add(styles.navbarHidden)
           }
@@ -95,6 +97,12 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
             window.removeEventListener('click', handleClick) // 清除点击事件监听
           }
         }, [])
+
+        // 路由变化时重置状态
+        useEffect(() => {
+          displayLock.current = false
+          triggeredByWheel.current = false
+        }, [location])
 
         return (
           <nav
