@@ -4,12 +4,12 @@ import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-com
 import type { Props } from '@theme/Navbar/Layout'
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar'
 import clsx from 'clsx'
-import { type ComponentProps, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import styles from './styles.module.css'
 
-function NavbarBackdrop(props: ComponentProps<'div'>) {
+function NavbarBackdrop(props: React.ComponentProps<'div'>) {
   return <div role="presentation" {...props} className={clsx('navbar-sidebar__backdrop', props.className)} />
 }
 
@@ -32,77 +32,57 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
         const triggeredByWheel = useRef(false)
         const displayLock = useRef(false) // 持续上滑显示锁定状态
 
-        // 监听鼠标滚轮事件，获取滚动方向
         const handleWheel = (e: WheelEvent) => {
           wheelDirection.current = e.deltaY > 0 ? 1 : -1
           triggeredByWheel.current = true
 
-          // 仅在导航栏隐藏时触发显示锁定
-          if (
-            hideOnScroll &&
-            wheelDirection.current === -1 &&
-            navbar.current?.classList.contains(styles.navbarHidden)
-          ) {
-            navbar.current.classList.remove(styles.navbarHidden)
-            displayLock.current = true // 锁定显示状态
-          } else if (hideOnScroll && wheelDirection.current === 1) {
-            navbar.current.classList.add(styles.navbarHidden)
-            displayLock.current = false // 解除锁定
+          if (hideOnScroll) {
+            requestAnimationFrame(() => {
+              if (wheelDirection.current === -1) {
+                if (navbar.current) navbar.current.style.opacity = '1' // 显示导航栏
+                displayLock.current = true
+              } else {
+                if (navbar.current) navbar.current.style.opacity = '0' // 隐藏导航栏
+                displayLock.current = false
+              }
+            })
           }
         }
 
-        // 添加点击事件监听，隐藏导航栏
-        const handleClick = () => {
-          if (displayLock.current) {
-            navbar.current?.classList.add(styles.navbarHidden)
-            displayLock.current = false // 解除锁定
-          }
-        }
-
-        // 监听页面滚动事件
         const handleScroll = () => {
           const scrollTop = window.pageYOffset
 
-          // 到顶部时始终显示导航栏
-          if (scrollTop === 0) {
-            navbar.current?.classList.remove(styles.navbarHidden)
-          }
-          // 如果向下滚动且未锁定显示状态，隐藏导航栏
-          else if (scrollTop > lastScrollTop.current && !displayLock.current) {
-            navbar.current?.classList.add(styles.navbarHidden)
-          }
-          // 向上滚动时显示导航栏
-          else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) {
-            navbar.current?.classList.add(styles.navbarHidden)
-          }
+          requestAnimationFrame(() => {
+            if (scrollTop === 0) {
+              if (navbar.current) navbar.current.style.opacity = '1' // 到顶部时显示导航栏
+            } else if (scrollTop > lastScrollTop.current && !displayLock.current) {
+              if (navbar.current) navbar.current.style.opacity = '0' // 向下滚动时隐藏导航栏
+            } else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) {
+              if (navbar.current) navbar.current.style.opacity = '0' // 非滚轮触发时隐藏导航栏
+            }
 
-          // 重置滚轮触发标记
-          if (scrollTop !== lastScrollTop.current) {
+            lastScrollTop.current = scrollTop
             triggeredByWheel.current = false
-          }
-
-          lastScrollTop.current = scrollTop
+          })
         }
 
         useEffect(() => {
-          navbar.current = document.querySelector('.navbar')
+          navbar.current = document.querySelector('.navbar') as HTMLDivElement
 
           window.addEventListener('wheel', handleWheel)
           window.addEventListener('scroll', handleScroll)
-          window.addEventListener('click', handleClick) // 监听点击事件
+          window.addEventListener('click', () => {
+            if (displayLock.current) {
+              if (navbar.current) navbar.current.style.opacity = '0' // 点击时隐藏导航栏
+              displayLock.current = false
+            }
+          })
 
           return () => {
             window.removeEventListener('wheel', handleWheel)
             window.removeEventListener('scroll', handleScroll)
-            window.removeEventListener('click', handleClick) // 清除点击事件监听
           }
         }, [])
-
-        // 路由变化时重置状态
-        useEffect(() => {
-          displayLock.current = false
-          triggeredByWheel.current = false
-        }, [location])
 
         return (
           <nav
@@ -112,13 +92,14 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
               'navbar',
               'navbar--fixed-top',
               isHomePage && 'bg-transparent',
-              hideOnScroll && [styles.navbarHideable, !isNavbarVisible && styles.navbarHidden],
+              hideOnScroll && styles.navbarHideable,
               {
                 'navbar--dark': style === 'dark',
                 'navbar--primary': style === 'primary',
                 'navbar-sidebar--show': mobileSidebar.shown,
               },
             )}
+            style={{ transition: 'opacity 0.3s ease-in-out' }} // 过渡效果
           >
             {children}
             <NavbarBackdrop onClick={mobileSidebar.toggle} />
