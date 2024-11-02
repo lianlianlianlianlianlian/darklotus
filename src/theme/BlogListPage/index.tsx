@@ -59,7 +59,14 @@ function BlogListPageContent(props: Props) {
   const { metadata, items } = props
 
   // 从 localStorage 中获取初始 viewType，默认是 'list'
-  const [viewType, setViewType] = useState<ViewType>(() => (localStorage.getItem('viewType') as ViewType) || 'list')
+  const [viewType, setViewType] = useState<ViewType>('list')
+
+  useEffect(() => {
+    const storedViewType = localStorage.getItem('viewType') as ViewType
+    if (storedViewType) {
+      setViewType(storedViewType)
+    }
+  }, [])
 
   // 更新视图模式并存储到 localStorage
   const toggleViewType = (newViewType: ViewType) => {
