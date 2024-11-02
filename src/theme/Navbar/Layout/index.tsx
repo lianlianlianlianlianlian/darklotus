@@ -35,13 +35,15 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
 
     if (hideOnScroll) {
       requestAnimationFrame(() => {
-        if (wheelDirection.current === -1) { // 向上滚动
+        if (wheelDirection.current === -1) {
+          // 向上滚动
           if (navbar.current) {
             navbar.current.style.opacity = '1' // 显示导航栏
             navbar.current.style.pointerEvents = 'auto' // 启用点击
           }
           displayLock.current = true // 锁定显示状态
-        } else { // 向下滚动
+        } else {
+          // 向下滚动
           if (navbar.current) {
             navbar.current.style.opacity = '0' // 隐藏导航栏
             navbar.current.style.pointerEvents = 'none' // 禁用点击
@@ -57,17 +59,20 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
     const scrollTop = window.pageYOffset
 
     requestAnimationFrame(() => {
-      if (scrollTop === 0) { // 滚动到顶部时显示导航栏
+      if (scrollTop === 0) {
+        // 滚动到顶部时显示导航栏
         if (navbar.current) {
           navbar.current.style.opacity = '1'
           navbar.current.style.pointerEvents = 'auto'
         }
-      } else if (scrollTop > lastScrollTop.current && !displayLock.current) { // 向下滚动且未锁定时隐藏
+      } else if (scrollTop > lastScrollTop.current && !displayLock.current) {
+        // 向下滚动且未锁定时隐藏
         if (navbar.current) {
           navbar.current.style.opacity = '0'
           navbar.current.style.pointerEvents = 'none'
         }
-      } else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) { // 非滚轮触发且未锁定时隐藏
+      } else if (scrollTop < lastScrollTop.current && !triggeredByWheel.current && !displayLock.current) {
+        // 非滚轮触发且未锁定时隐藏
         if (navbar.current) {
           navbar.current.style.opacity = '0'
           navbar.current.style.pointerEvents = 'none'
@@ -80,13 +85,15 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
   }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') { // 确保只在客户端执行
+    if (typeof window !== 'undefined') {
+      // 确保只在客户端执行
       navbar.current = document.querySelector('.navbar') as HTMLDivElement
 
       window.addEventListener('wheel', handleWheel)
       window.addEventListener('scroll', handleScroll)
       window.addEventListener('click', () => {
-        if (displayLock.current) { // 当点击页面时解除锁定并隐藏导航栏
+        if (displayLock.current) {
+          // 当点击页面时解除锁定并隐藏导航栏
           if (navbar.current) {
             navbar.current.style.opacity = '0'
             navbar.current.style.pointerEvents = 'none'
