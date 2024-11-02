@@ -284,8 +284,8 @@ div[class^='announcementBar_'] {
 
 @media (max-width: 996px) {
   .footer__col {
-      flex: 1 0; /* 设置为弹性盒子，允许扩展 */
-      margin: -1px; /* 边距设置 */
+    flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
+      margin: 10px; /* 边距设置 */
       min-width: 5px; /* 最小宽度设置 */
       text-align: center; /* 文本居中对齐 */
   }
@@ -294,7 +294,7 @@ div[class^='announcementBar_'] {
 @media (max-width: 421px) {
   .footer__col {
       flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
-      margin: -2px; /* 边距设置 */
+      margin: 10px; /* 边距设置 */
       min-width: 50px; /* 最小宽度设置 */
       text-align: center; /* 文本居中对齐 */
   }
