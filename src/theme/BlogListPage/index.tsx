@@ -8,10 +8,10 @@ import SearchMetadata from '@theme/SearchMetadata'
 
 import Translate from '@docusaurus/Translate'
 import { Icon } from '@iconify/react'
-import { type ViewType, useViewType } from '@site/src/hooks/useViewType'
+import { type ViewType } from '@site/src/hooks/useViewType'
 import BlogPostGridItems from '../BlogPostGridItems'
 
-import { useEffect, useState } from 'react' // 导入 useState 和 useEffect
+import { useEffect, useState } from 'react'
 import MyLayout from '../MyLayout'
 
 function BlogListPageMetadata(props: Props): JSX.Element {
@@ -58,12 +58,13 @@ function ViewTypeSwitch({
 function BlogListPageContent(props: Props) {
   const { metadata, items } = props
 
-  // 使用 useState 来设置初始视图为 'list'
-  const [viewType, setViewType] = useState<ViewType>('list')
+  // 从 localStorage 中获取初始 viewType，默认是 'list'
+  const [viewType, setViewType] = useState<ViewType>(() => (localStorage.getItem('viewType') as ViewType) || 'list')
 
-  // 通过 toggleViewType 函数切换视图
+  // 更新视图模式并存储到 localStorage
   const toggleViewType = (newViewType: ViewType) => {
     setViewType(newViewType)
+    localStorage.setItem('viewType', newViewType)
   }
 
   const isListView = viewType === 'list'
