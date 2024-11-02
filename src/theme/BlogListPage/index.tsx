@@ -11,6 +11,7 @@ import { Icon } from '@iconify/react'
 import { type ViewType, useViewType } from '@site/src/hooks/useViewType'
 import BlogPostGridItems from '../BlogPostGridItems'
 
+import { useEffect, useState } from 'react' // 导入 useState 和 useEffect
 import MyLayout from '../MyLayout'
 
 function BlogListPageMetadata(props: Props): JSX.Element {
@@ -57,7 +58,13 @@ function ViewTypeSwitch({
 function BlogListPageContent(props: Props) {
   const { metadata, items } = props
 
-  const { viewType, toggleViewType } = useViewType()
+  // 使用 useState 来设置初始视图为 'list'
+  const [viewType, setViewType] = useState<ViewType>('list')
+
+  // 通过 toggleViewType 函数切换视图
+  const toggleViewType = (newViewType: ViewType) => {
+    setViewType(newViewType)
+  }
 
   const isListView = viewType === 'list'
   const isGridView = viewType === 'grid'
@@ -68,7 +75,6 @@ function BlogListPageContent(props: Props) {
         <Translate id="theme.blog.title.new">博客</Translate>
       </h2>
       <p className="mb-4 text-center">
-        {' '}
         <a href="https://Blog.DarkLotus.CN" target="_blank">
           Blog.DarkLotus.CN
         </a>
