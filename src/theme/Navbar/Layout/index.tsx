@@ -22,7 +22,7 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
   const location = useLocation()
   const isHomePage = location.pathname === '/' || location.pathname === '/en/'
 
-  const lastScrollTop = useRef(window.pageYOffset)
+  const lastScrollTop = useRef(0)
   const wheelDirection = useRef(0)
   const navbar = useRef<HTMLDivElement | null>(null)
   const triggeredByWheel = useRef(false)
@@ -80,23 +80,25 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
   }
 
   useEffect(() => {
-    navbar.current = document.querySelector('.navbar') as HTMLDivElement
+    if (typeof window !== 'undefined') { // 确保只在客户端执行
+      navbar.current = document.querySelector('.navbar') as HTMLDivElement
 
-    window.addEventListener('wheel', handleWheel)
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('click', () => {
-      if (displayLock.current) { // 当点击页面时解除锁定并隐藏导航栏
-        if (navbar.current) {
-          navbar.current.style.opacity = '0'
-          navbar.current.style.pointerEvents = 'none'
+      window.addEventListener('wheel', handleWheel)
+      window.addEventListener('scroll', handleScroll)
+      window.addEventListener('click', () => {
+        if (displayLock.current) { // 当点击页面时解除锁定并隐藏导航栏
+          if (navbar.current) {
+            navbar.current.style.opacity = '0'
+            navbar.current.style.pointerEvents = 'none'
+          }
+          displayLock.current = false
         }
-        displayLock.current = false
-      }
-    })
+      })
 
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-      window.removeEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('wheel', handleWheel)
+        window.removeEventListener('scroll', handleScroll)
+      }
     }
   }, [])
 
