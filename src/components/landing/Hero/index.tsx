@@ -1,7 +1,7 @@
 import Translate from '@docusaurus/Translate'
+import { Icon } from '@iconify/react'
 import SocialLinks from '@site/src/components/SocialLinks'
 import { type Variants, motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
 import { MovingButton } from '../../magicui/moving-border'
 import HeroSvg from './img/hero.svg'
 import styles from './styles.module.css'
