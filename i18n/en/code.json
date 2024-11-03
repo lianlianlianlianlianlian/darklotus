@@ -1,4 +1,8 @@
 {
+  "theme.friends.applyLink": {
+    "message": "Request a Friend Link",
+    "description": "申请友链"
+  },
   "theme.friends.title": {
     "message": "Friend Links",
     "description": "友链标题"

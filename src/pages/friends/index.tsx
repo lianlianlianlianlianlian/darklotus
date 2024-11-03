@@ -42,11 +42,19 @@ function FriendHeader({ onApplyClick, showFooter }: { onApplyClick: () => void; 
       <p>{DESCRIPTION}</p>
       {showFooter ? (
         <button className="button button--primary" onClick={onApplyClick}>
-          申请友链
+          {translate({
+            id: 'theme.friends.applyLink',
+            message: '申请友链',
+            description: 'Button text for applying to become a friend link',
+          })}
         </button>
       ) : (
         <a href={ADD_FRIEND_URL} target="_blank" rel="noopener noreferrer" className="button button--primary">
-          申请友链
+          {translate({
+            id: 'theme.friends.applyLink',
+            message: '申请友链',
+            description: 'Button text for applying to become a friend link',
+          })}
         </a>
       )}
     </section>
