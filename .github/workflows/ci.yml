@@ -19,14 +19,17 @@ jobs:
 
       - run: corepack enable
 
-      - name: Install dependencies
-        run: npm install
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
 
       - name: Build
-        run: npm run build
+        run: nr build
 
       - name: Lint
-        run: npm run lint
+        run: nr lint
 
       - name: SSH Deploy and Execute Build
         uses: easingthemes/ssh-deploy@v4.1.10
