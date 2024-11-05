@@ -2,6 +2,7 @@ import Translate from '@docusaurus/Translate'
 import { Icon } from '@iconify/react'
 import SocialLinks from '@site/src/components/SocialLinks'
 import { type Variants, motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 import { MovingButton } from '../../magicui/moving-border'
 import HeroSvg from './img/hero.svg'
 import styles from './styles.module.css'
@@ -77,7 +78,6 @@ const variants: Variants = {
 }
 
 function getRandomIcon() {
-  // 随机选择一个图标名称
   return icons[Math.floor(Math.random() * icons.length)]
 }
 
@@ -86,6 +86,16 @@ function Circle() {
 }
 
 function Name() {
+  const [currentIcon, setCurrentIcon] = useState(getRandomIcon())
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIcon(getRandomIcon())
+    }, 2000) // 每隔三秒切换图标
+
+    return () => clearInterval(interval) // 清理副作用
+  }, [])
+
   return (
     <motion.div
       className={styles.hero_text}
@@ -110,7 +120,7 @@ function Name() {
         <Translate id="homepage.hero.name">Lian</Translate>
       </span>
       <span className="ml-1">
-        <Icon icon={getRandomIcon()} /> {/* 随机显示图标 */}
+        <Icon icon={currentIcon} /> {/* 显示当前图标 */}
       </span>
     </motion.div>
   )
