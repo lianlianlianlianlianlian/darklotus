@@ -1,3 +1,20 @@
+---
+id: php-htaccess-rules
+slug: php
+sidebar_position: 12
+title: 通用的 PHP 动态网站伪静态规则
+description: 介绍适用于PHP动态网站的通用伪静态规则
+date: 2024-11-04
+authors: lian
+tags: 
+  - PHP
+  - Nginx
+  - 伪静态
+keywords: 
+  - PHP
+  - 动态网站
+  - 伪静态
+---
 
 
 

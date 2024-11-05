@@ -1,15 +1,20 @@
 ---
-id: docker-install-macos # 唯一ID
-slug: macos # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
+id: macos-install-docker
+slug: macos
+sidebar_position: 25
 title: Macos 安装 Docker
-description: Macos 上安装 Docker # 描述
-date: 2024-10-27
+description: 介绍如何在 MacOS 系统上安装 Docker 的步骤
+date: 2024-11-04
 authors: lian
-tags: [docker,macos]
-keywords: [docke,macos]
-
+tags: 
+  - MacOS
+  - Docker
+keywords: 
+  - MacOS
+  - 安装
+  - Docker
 ---
+
 
 在 macOS 上安装 Docker 的详细步骤如下：
 

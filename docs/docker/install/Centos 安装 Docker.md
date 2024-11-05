@@ -1,15 +1,20 @@
 ---
-id: docker-install-centos # 唯一ID
-slug: centos # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+id: centos-install-docker
+slug: centos
+sidebar_position: 22
 title: Centos 安装 Docker
-description: Centos 上安装 Docker # 描述
-date: 2024-10-27
+description: 介绍如何在 CentOS 系统上安装 Docker 的步骤
+date: 2024-11-04
 authors: lian
-tags: [docker,centos]
-keywords: [docke,cenots]
-
+tags: 
+  - CentOS
+  - Docker
+keywords: 
+  - CentOS
+  - 安装
+  - Docker
 ---
+
 ## 准备工作
 
 ### 系统要求

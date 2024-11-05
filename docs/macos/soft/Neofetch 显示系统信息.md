@@ -1,15 +1,20 @@
 ---
-id: mac-neofetch # 唯一ID
-slug: neofetch # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+id: neofetch
+slug: neofetch
+sidebar_position: 17
 title: Neofetch 显示系统信息
-description: Neofetch 显示系统信息的工具 # 描述
-date: 2024-10-27
+description: 介绍如何使用 Neofetch 显示系统信息及其配置方法
+date: 2024-11-04
 authors: lian
-tags: [mac]
-keywords: [mac]
-
+tags: 
+  - Neofetch
+  - 系统信息
+keywords: 
+  - Neofetch
+  - 系统信息
+  - 配置
 ---
+
 
 
 `Neofetch` 是一个用来在终端中显示系统信息的工具，通常用于展示系统的概览，包括操作系统、内核版本、CPU、内存、安装时间等信息。它的输出通常伴随着一个 ASCII 艺术图形，代表你的操作系统或其他自定义图形。以下是 `Neofetch` 在 macOS 下的详细玩法：

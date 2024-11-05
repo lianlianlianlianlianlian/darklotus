@@ -1,19 +1,17 @@
 ---
-id: docker-info 
-slug: info 
-sidebar_position: 1  
+id: what-is-docker
+slug: whatis
+sidebar_position: 28
 title: Docker 是什么
-description: Docker 是什么 
-date: 2024-10-27
+description: 介绍 Docker 的概念、功能及其用途
+date: 2024-11-04
 authors: lian
-tags: [docker]
-image: https://i.imgur.com/mErPwqL.png  
-keywords:                            
-  - Docker 
-  - Docker 是什么 
-last_update:                          
-  date: 2024-11-2 00:00                   
-  author: Lian          #
+tags: 
+  - Docker
+keywords: 
+  - Docker
+  - 容器
+  - 虚拟化
 ---
 
 

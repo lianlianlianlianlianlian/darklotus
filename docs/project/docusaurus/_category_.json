@@ -1,0 +1,8 @@
+{
+  "label": "Docusaurus",
+  "position": 40,
+  "link": {
+    "type": "generated-index",
+    "description": "Docusaurus 知识库"
+  }
+}

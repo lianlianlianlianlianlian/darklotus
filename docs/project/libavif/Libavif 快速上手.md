@@ -2,7 +2,7 @@
 id: libavif-getting-started
 slug: getting-started
 sidebar_position: 1
-title: 快速上手
+title: Libavif 快速上手
 description: Libavif 快速上手
 pagination_label: Libavif 快速上手
 authors: Lian

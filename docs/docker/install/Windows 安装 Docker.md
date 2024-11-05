@@ -1,15 +1,20 @@
 ---
-id: docker-install-win # 唯一ID
-slug: win # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 4  # 控制该文档在侧边栏的显示顺序
-title: Windows 安装 Docker 
-description: Windows 上安装 Docker # 描述
-date: 2024-10-27
+id: windows-install-docker
+slug: windows
+sidebar_position: 26
+title: Windows 安装 Docker
+description: 介绍如何在 Windows 系统上安装 Docker 的步骤
+date: 2024-11-04
 authors: lian
-tags: [docker,windows]
-keywords: [docker,windows]
-
+tags: 
+  - Windows
+  - Docker
+keywords: 
+  - Windows
+  - 安装
+  - Docker
 ---
+
 
 Windows 上安装 Docker
 

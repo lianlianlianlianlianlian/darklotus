@@ -2,9 +2,9 @@
 id: libavif-geshi
 slug: geshi
 sidebar_position: 10
-title: Libavif可以转换哪些图片格式
-description: Libavif可以转换哪些图片格式
-pagination_label: Libavif可以转换哪些图片格式
+title: Libavif 可以转换哪些图片格式
+description: Libavif 可以转换哪些图片格式
+pagination_label: Libavif 可以转换哪些图片格式
 authors: Lian
 tags: 
   - 快速上手                     

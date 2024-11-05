@@ -1,15 +1,19 @@
 ---
-id: docker-rush # 唯一ID
-slug: rush # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
+id: docker-image-accelerate
+slug: accelerate
+sidebar_position: 27
 title: Docker 镜像加速
-description: Docker 镜像加速 # 描述
-date: 2024-10-27
+description: 介绍如何加速 Docker 镜像下载的步骤
+date: 2024-11-04
 authors: lian
-tags: [docker]
-keywords: [docker]
-
+tags: 
+  - Docker
+keywords: 
+  - Docker
+  - 镜像
+  - 加速
 ---
+
 ## 独享加速
 
 本站提供的镜像加速地址：https://docker.kisskiss.store

@@ -1,3 +1,19 @@
+---
+id: seo-url-rewrite
+slug: seo
+sidebar_position: 14
+title: 伪静态规则会影响网站的 SEO 吗？
+description: 探讨伪静态规则对网站SEO的影响
+date: 2024-11-04
+authors: lian
+tags: 
+  - SEO
+  - 伪静态
+keywords: 
+  - SEO
+  - 伪静态
+  - 网站优化
+---
 
 
 

@@ -1,15 +1,20 @@
 ---
-id: docker-install-linuxlixian # 唯一ID
-slug: linuxlixian # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 200  # 控制该文档在侧边栏的显示顺序
+id: linux-offline-install-docker
+slug: offline
+sidebar_position: 2400
 title: Linux 离线安装 Docker
-description: Linux 离线安装 Docker # 描述
-date: 2024-10-27
+description: 介绍如何在 Linux 系统上进行 Docker 的离线安装
+date: 2024-11-04
 authors: lian
-tags: [docker,linux]
-keywords: [docker.linux]
-
+tags: 
+  - Linux
+  - Docker
+keywords: 
+  - Linux
+  - 离线安装
+  - Docker
 ---
+
 
 在 Linux 系统上离线安装 Docker 通常涉及下载 Docker 的安装包和依赖项，然后在没有互联网连接的环境中进行安装。以下是一个详细的步骤指南，适用于大多数 Linux 发行版（如 Ubuntu、CentOS 等）。
 

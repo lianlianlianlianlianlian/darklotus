@@ -1,15 +1,20 @@
 ---
-id: synology-photoformat # 唯一ID
-slug: photoformat # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 1  # 控制该文档在侧边栏的显示顺序
-title: Synology Photos 支持哪些格式？
-description: Synology Photos 支持哪些格式？ # 描述
-date: 2024-10-27
+id: synology-photos-supported-formats
+slug: formats
+sidebar_position: 29
+title: Synology Photos 支持哪些格式
+description: 介绍 Synology Photos 支持的文件格式和类型
+date: 2024-11-04
 authors: lian
-tags: [synology]
-keywords: [synology]
-
+tags: 
+  - Synology
+  - Photos
+keywords: 
+  - Synology
+  - Photos
+  - 格式
 ---
+
 
 Synology Photos 支持的格式如下：
 

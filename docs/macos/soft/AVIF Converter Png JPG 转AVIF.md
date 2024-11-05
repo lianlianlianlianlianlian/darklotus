@@ -1,14 +1,20 @@
 ---
-id: mac-soft-avifconverter
+id: avif-converter
 slug: avifconverter
-sidebar_position: 2  
+sidebar_position: 2
 title: AVIF Converter Png JPG 转AVIF
-description: AVIF Converter Png JPG 转AVIF
-date: 2024-10-27
+description: 介绍如何将 PNG 和 JPG 格式转换为 AVIF 格式
+date: 2024-11-04
 authors: lian
-tags: [mac,iina]
-keywords: [mac,iina]
-
+tags: 
+  - AVIF
+  - 转换
+  - 图片
+keywords: 
+  - AVIF
+  - PNG
+  - JPG
+  - 转换
 ---
 
 我在用的avif转换工具 Appstore里直接就可以搜到下载 也可以去官网使用网页版 

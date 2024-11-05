@@ -1,15 +1,20 @@
 ---
-id: mac-soft-piclist # 唯一ID
-slug: piclist # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+id: piclist
+slug: piclist
+sidebar_position: 18
 title: Piclist 云存储和图床管理工具
-description: Macos 安装 Piclist # 描述
-date: 2024-10-27
+description: 介绍 Piclist 作为云存储和图床管理工具的功能和使用方法
+date: 2024-11-04
 authors: lian
-tags: [mac,piclist]
-keywords: [mac,piclist]
-
+tags: 
+  - 云存储
+  - 图床
+keywords: 
+  - Piclist
+  - 云存储
+  - 图床
 ---
+
 
 ## 软件截图
 ![Piclist](../img/Piclist.webp)

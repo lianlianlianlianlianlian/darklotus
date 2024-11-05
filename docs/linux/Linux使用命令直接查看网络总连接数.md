@@ -1,3 +1,19 @@
+---
+id: linux-network-connections
+slug: onnections
+sidebar_position: 9
+title: Linux 使用命令直接查看网络总连接数
+description: 如何在Linux中使用命令查看网络的总连接数
+date: 2024-11-04
+authors: lian
+tags: 
+  - Linux
+  - 网络
+keywords: 
+  - Linux
+  - 网络
+  - 连接数
+---
 
 
 在 Linux 中查看网络连接的总数（即网络连接的数量，而不是具体的连接信息），可以使用以下几种方法获取系统当前的连接总数：

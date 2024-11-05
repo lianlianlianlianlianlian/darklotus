@@ -1,15 +1,20 @@
 ---
-id: mac-soft-iina # 唯一ID
-slug: iina # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+id: iina-player
+slug: iina
+sidebar_position: 16
 title: IINA 免费开源的视频播放器
-description: IINA 免费开源的视频播放器 # 描述
-date: 2024-10-27
+description: 介绍 IINA 作为一款免费的开源视频播放器的功能和特点
+date: 2024-11-04
 authors: lian
-tags: [mac,iina]
-keywords: [mac,iina]
-
+tags: 
+  - 视频播放器
+  - 开源
+keywords: 
+  - IINA
+  - 视频
+  - 开源
 ---
+
 ## 软件截图
 ![iina](../img/iina.webp)
 

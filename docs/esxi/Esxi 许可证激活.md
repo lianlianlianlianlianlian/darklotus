@@ -1,15 +1,21 @@
 ---
-id: esxi-key # 唯一ID
-slug: key # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
+id: esxi-license-activation
+slug: esxilicense
+sidebar_position: 20
 title: Esxi 许可证激活
-description: Esxi 许可证激活 # 描述
-date: 2024-10-27
+description: 介绍如何激活 Esxi 许可证
+date: 2024-11-04
 authors: lian
-tags: [esxi]
-keywords: [esxi]
-
+tags: 
+  - Esxi
+  - 激活码
+  - 许可证
+keywords: 
+  - Esxi
+  - 激活
+  - 许可证
 ---
+
 
 ## 许可证激活码
 

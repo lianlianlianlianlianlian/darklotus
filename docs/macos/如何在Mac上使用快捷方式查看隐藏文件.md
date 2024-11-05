@@ -1,15 +1,20 @@
 ---
-id: mac-hide # 唯一ID
-slug: hide # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
-sidebar_position: 2  # 控制该文档在侧边栏的显示顺序
+id: mac-show-hidden-files
+slug: mac-hidden-files
+sidebar_position: 19
 title: 如何在Mac上使用快捷方式查看隐藏文件
-description: 如何在Mac上使用快捷方式查看隐藏文件 # 描述
-date: 2024-10-27
+description: 介绍在Mac上使用快捷方式查看隐藏文件的方法
+date: 2024-11-04
 authors: lian
-tags: [mac]
-keywords: [mac]
-
+tags: 
+  - Mac
+  - 隐藏文件
+keywords: 
+  - Mac
+  - 隐藏文件
+  - 快捷方式
 ---
+
 
 
 在Mac上查看隐藏文件，你可以使用以下快捷方式：

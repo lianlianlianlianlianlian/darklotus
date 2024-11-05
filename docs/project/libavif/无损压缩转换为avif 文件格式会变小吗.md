@@ -1,3 +1,19 @@
+---
+id: lossless-avif-compression
+slug: lossless
+sidebar_position: 6 
+title: 无损压缩转换为AVIF文件格式会变小吗
+description: 探讨无损压缩是否会导致AVIF文件格式变小
+date: 2024-11-04
+authors: lian
+tags: 
+  - Avif
+  - 压缩
+keywords: 
+  - Avif
+  - 无损压缩
+  - 文件大小
+---
 
 
 无损压缩转换为 AVIF 文件时，文件大小通常会比原始图像大或相近，具体情况取决于多个因素：

@@ -1,3 +1,21 @@
+---
+id: install-ssh-linux
+slug: ssh-install
+sidebar_position: 8
+title: Linux 安装SSH和开启SSH服务
+description: 介绍如何在Linux上安装SSH并开启SSH服务
+date: 2024-11-04
+authors: lian
+tags: 
+  - Linux
+  - SSH
+keywords: 
+  - Linux
+  - SSH
+  - 安装
+  - 服务
+---
+
 
 折腾ubuntu老是遇到默认没有ssh 于是有了这篇学习笔记
 
