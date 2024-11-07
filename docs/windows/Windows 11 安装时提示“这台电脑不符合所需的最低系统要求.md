@@ -2,7 +2,7 @@
 id: windows-tmp # 唯一ID
 slug: tmp # URL(最多三级结构，便于seo 和理解，遵循doc/资源/具体说明项 的原则)
 sidebar_position: 100  # 控制该文档在侧边栏的显示顺序
-title: Windows 11 安装时提示“这台电脑不符合所需的最低系统要求
+title: 安装时提示“这台电脑不符合所需的最低系统要求
 description: 在安装 Windows 11 时提示“这台电脑不符合所需的最低系统要求 # 描述
 date: 2024-10-27
 authors: lian

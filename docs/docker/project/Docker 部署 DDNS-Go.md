@@ -1,3 +1,20 @@
+---
+id: docker-deploy-ddnsgo
+slug: ddnsgo
+sidebar_position: 30
+title: Docker 部署 DDNS-Go
+description: 介绍如何通过 Docker 部署 DDNS-Go 的步骤
+date: 2024-11-05
+authors: lian
+tags: 
+  - Docker
+  - DDNS-Go
+keywords: 
+  - Docker
+  - DDNS-Go
+  - 部署
+---
+
 # DDNS-Go 使用指南
 
 本指南将指导您如何使用 Docker 拉取并运行 DDNS-Go。
@@ -76,4 +93,5 @@ docker restart ddns-go
 
 ## 结论
 
-通过上述步骤，您已成功使用 Docker 拉取并运行 DDNS-Go。根据需要配置相关设置，以满足您的动态 DNS 需求。如需更多信息，请参考 [DDNS-Go 官方文档](https://github.com/jeessy/ddns-go)。
+通过上述步骤，您已成功使用 Docker 拉取并运行 DDNS-Go。根据需要配置相关设置，以满足您的动态 DNS 需求。如需更多信息，请参考
+ [DDNS-Go 官方文档](https://github.com/jeessy/ddns-go)。

@@ -2,7 +2,7 @@
 id: linux-network-connections
 slug: onnections
 sidebar_position: 9
-title: Linux 使用命令直接查看网络总连接数
+title: 使用命令直接查看网络总连接数
 description: 如何在Linux中使用命令查看网络的总连接数
 date: 2024-11-04
 authors: lian

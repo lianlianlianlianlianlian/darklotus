@@ -81,6 +81,12 @@ function getRandomIcon() {
   return icons[Math.floor(Math.random() * icons.length)]
 }
 
+function isIconValid(icon) {
+  // 检查图标是否有效
+  // 这里可以添加加载图标的逻辑，比如尝试加载图标并查看是否成功
+  return true; // 假设所有图标都有效
+}
+
 function Circle() {
   return <div className={styles.circle} />
 }
@@ -90,8 +96,12 @@ function Name() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIcon(getRandomIcon())
-    }, 2000) // 每隔三秒切换图标
+      let newIcon;
+      do {
+        newIcon = getRandomIcon();
+      } while (!isIconValid(newIcon)); // 确保新图标有效
+      setCurrentIcon(newIcon);
+    }, 2000) // 每隔两秒切换图标
 
     return () => clearInterval(interval) // 清理副作用
   }, [])
@@ -105,7 +115,7 @@ function Name() {
       variants={variants}
       onMouseMove={e => {
         e.currentTarget.style.setProperty('--x', `${e.clientX}px`)
-        e.currentTarget.style.setProperty('--y', `${e.clientY}px`)
+        e.currentTarget.style.setProperty('--y', `${e.currentTarget.clientY}px`)
       }}
     >
       <Translate id="homepage.hero.greet">Hello! 我是</Translate>

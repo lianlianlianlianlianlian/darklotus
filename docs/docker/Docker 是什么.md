@@ -1,7 +1,7 @@
 ---
 id: what-is-docker
 slug: whatis
-sidebar_position: 28
+sidebar_position: 2
 title: Docker 是什么
 description: 介绍 Docker 的概念、功能及其用途
 date: 2024-11-04

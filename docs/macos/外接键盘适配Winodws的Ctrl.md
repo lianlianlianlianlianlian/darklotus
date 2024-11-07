@@ -2,16 +2,16 @@
 id: mac-keyboard-windows-ctrl
 slug: ctrl 
 sidebar_position: 3 
-title: Mac外接键盘适配Windows的Ctrl
+title: 外接键盘适配Windows的Ctrl
 description: 在Mac外接键盘上适配Windows的Ctrl键使用方法
 date: 2024-11-04
 authors: lian
 tags: 
-  - Macos
+  - MacOS
   - Keyboard
   - Windows
 keywords:                             
-  - Macos
+  - MacOS
   - Keyboard
   - Windows
   - ctrl键

@@ -2,12 +2,12 @@
 id: mac-show-hidden-files
 slug: mac-hidden-files
 sidebar_position: 19
-title: 如何在Mac上使用快捷方式查看隐藏文件
+title: 在Mac上查看隐藏文件
 description: 介绍在Mac上使用快捷方式查看隐藏文件的方法
 date: 2024-11-04
 authors: lian
 tags: 
-  - Mac
+  - MacOS
   - 隐藏文件
 keywords: 
   - Mac

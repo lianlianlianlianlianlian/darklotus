@@ -2,7 +2,7 @@
 id: install-ssh-linux
 slug: ssh-install
 sidebar_position: 8
-title: Linux 安装SSH和开启SSH服务
+title: 安装SSH和开启SSH服务
 description: 介绍如何在Linux上安装SSH并开启SSH服务
 date: 2024-11-04
 authors: lian
