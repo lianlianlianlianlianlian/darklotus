@@ -84,7 +84,7 @@ function getRandomIcon() {
 function isIconValid(icon) {
   // 检查图标是否有效
   // 这里可以添加加载图标的逻辑，比如尝试加载图标并查看是否成功
-  return true; // 假设所有图标都有效
+  return true // 假设所有图标都有效
 }
 
 function Circle() {
@@ -96,11 +96,11 @@ function Name() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let newIcon;
+      let newIcon
       do {
-        newIcon = getRandomIcon();
-      } while (!isIconValid(newIcon)); // 确保新图标有效
-      setCurrentIcon(newIcon);
+        newIcon = getRandomIcon()
+      } while (!isIconValid(newIcon)) // 确保新图标有效
+      setCurrentIcon(newIcon)
     }, 2000) // 每隔两秒切换图标
 
     return () => clearInterval(interval) // 清理副作用
