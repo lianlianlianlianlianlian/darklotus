@@ -12,19 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set node version to 18
+      - name: Set node version to 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+
+      - name: Clean npm cache
+        run: npm cache clean --force  # 清理缓存
 
       - name: Install dependencies
-        run: npm install  # 使用普通的 npm install 安装依赖
+        run: npm install  # 安装依赖
 
       - name: Build
-        run: npm run build
+        run: npm run build  # 执行构建
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint  # 执行 lint
 
       - name: SSH Deploy and Execute Build
         uses: easingthemes/ssh-deploy@v4.1.10
