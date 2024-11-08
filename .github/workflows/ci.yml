@@ -22,8 +22,11 @@ jobs:
       - name: Setup
         run: npm i -g @antfu/ni
 
-      - name: Install
+      - name: Install ni
         run: nci
+
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build
         run: nr build
@@ -40,5 +43,3 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/darklotus.cn/index'
-
-
