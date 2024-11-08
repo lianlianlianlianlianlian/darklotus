@@ -22,10 +22,10 @@ jobs:
           npm install  # 使用 npm 安装项目依赖
 
       - name: format with npm
-        run: npm run format   
+        run: npm run format  # 运行代码格式化命令
 
       - name: lint:fix with npm
-        run: npm run lint:fix  
+        run: npm run lint:fix  # 运行代码修复命令
 
       - name: Build with npm
         run: npm run build  # 使用 npm 运行构建命令
