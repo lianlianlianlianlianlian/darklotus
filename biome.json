@@ -62,6 +62,11 @@
       "attributePosition": "auto"
     }
   },
+  "css": {
+    "parser": {
+      "cssModules": true
+    }
+  },
   "overrides": [
     {
       "include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
