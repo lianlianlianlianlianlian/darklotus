@@ -17,14 +17,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Clean npm cache
-        run: npm cache clean --force
-
-      - name: Install dependencies with npm ci
-        run: npm ci
-
-      - name: Install correct version of docusaurus-plugin-vercel-analytics
-        run: npm install docusaurus-plugin-vercel-analytics@3.5.2
+      - name: Install dependencies
+        run: npm install  # 使用普通的 npm install 安装依赖
 
       - name: Build
         run: npm run build
