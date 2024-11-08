@@ -358,7 +358,19 @@ img {
   font-style: normal; /* 字体样式 */
 }
 
+@font-face {
+  font-family: 'SpringRage'; /* 自定义字体 */
+  src: url('./fonts/SpringRage.ttf') format('truetype'); /* 字体文件路径 */
+}
+
 /* 仅在中文环境下应用自定义字体 */
 .navbar__title:lang(zh-CN) {
   font-family: 'HuangKaihua', cursive; /* 中文字体 */
+}
+
+/* 仅在英文环境下应用自定义字体 */
+.navbar__title:lang(en) {
+  font-family: 'SpringRage', cursive; /* 英文字体 */
+  font-size: 18px; /* 字体大小，可根据需求调整 */
+
 }
