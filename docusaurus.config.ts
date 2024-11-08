@@ -89,6 +89,7 @@ const config: Config = {
           items: [
             { label: '标签', to: 'blog/tags' }, // 子菜单中的归档链接
             { label: '归档', to: 'blog/archive' }, 
+            { label: '里程碑', to: 'blog/archive' }, 
           ],
         },
         // {
