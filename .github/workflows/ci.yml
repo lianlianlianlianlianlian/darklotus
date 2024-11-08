@@ -7,35 +7,30 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]  # 你可以根据需要添加 macos-latest, windows-latest
-        node: [18]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set node version to ${{ matrix.node }}
+      - name: Set node version to 18
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '18'
 
-      - run: corepack enable
+      - name: Clean npm cache
+        run: npm cache clean --force
 
-      - name: Install dependencies
-        run: |
-          npm install  # 安装依赖，确保所有依赖都安装好
+      - name: Install dependencies with npm ci
+        run: npm ci
 
-      - name: Setup @antfu/ni
-        run: npm i -g @antfu/ni
+      - name: Install correct version of docusaurus-plugin-vercel-analytics
+        run: npm install docusaurus-plugin-vercel-analytics@3.5.2
 
       - name: Build
-        run: npm run build  # 使用 npm run build 来执行构建，确保在 package.json 中定义了 build 脚本
+        run: npm run build
 
       - name: Lint
-        run: npm run lint  # 确保 lint 脚本已在 package.json 中定义
+        run: npm run lint
 
       - name: SSH Deploy and Execute Build
         uses: easingthemes/ssh-deploy@v4.1.10
