@@ -27,9 +27,7 @@
   --tweet-actions-line-height: 1rem;
   --tweet-actions-font-weight: 700;
   --tweet-actions-icon-size: 1.25em;
-  --tweet-actions-icon-wrapper-size: calc(
-    var(--tweet-actions-icon-size) + 0.75em
-  );
+  --tweet-actions-icon-wrapper-size: calc(var(--tweet-actions-icon-size) + 0.75em);
 
   /* Reply button */
   --tweet-replies-font-size: 0.875rem;
@@ -43,18 +41,11 @@
   box-sizing: border-box;
 }
 
-:is([data-theme='light'], .light) :where(.react-tweet-theme),
+:is([data-theme="light"], .light) :where(.react-tweet-theme),
 :where(.react-tweet-theme) {
-  --tweet-skeleton-gradient: linear-gradient(
-    270deg,
-    #fafafa,
-    #eaeaea,
-    #eaeaea,
-    #fafafa
-  );
+  --tweet-skeleton-gradient: linear-gradient(270deg, #fafafa, #eaeaea, #eaeaea, #fafafa);
   --tweet-border: 1px solid rgb(207, 217, 222);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --tweet-font-color: rgb(15, 20, 25);
   --tweet-font-color-secondary: rgb(83, 100, 113);
   --tweet-bg-color: #fff;
@@ -73,17 +64,10 @@
   --tweet-verified-blue-color: var(--tweet-color-blue-primary);
 }
 
-:is([data-theme='dark'], .dark) :where(.react-tweet-theme) {
-  --tweet-skeleton-gradient: linear-gradient(
-    270deg,
-    #15202b,
-    rgb(30, 39, 50),
-    rgb(30, 39, 50),
-    rgb(21, 32, 43)
-  );
+:is([data-theme="dark"], .dark) :where(.react-tweet-theme) {
+  --tweet-skeleton-gradient: linear-gradient(270deg, #15202b, rgb(30, 39, 50), rgb(30, 39, 50), rgb(21, 32, 43));
   --tweet-border: 1px solid rgb(66, 83, 100);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --tweet-font-color: rgb(247, 249, 249);
   --tweet-font-color-secondary: rgb(139, 152, 165);
   --tweet-bg-color: rgb(21, 32, 43);
@@ -104,16 +88,9 @@
 
 @media (prefers-color-scheme: dark) {
   :where(.react-tweet-theme) {
-    --tweet-skeleton-gradient: linear-gradient(
-      270deg,
-      #15202b,
-      rgb(30, 39, 50),
-      rgb(30, 39, 50),
-      rgb(21, 32, 43)
-    );
+    --tweet-skeleton-gradient: linear-gradient(270deg, #15202b, rgb(30, 39, 50), rgb(30, 39, 50), rgb(21, 32, 43));
     --tweet-border: 1px solid rgb(66, 83, 100);
-    --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif;
+    --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --tweet-font-color: rgb(247, 249, 249);
     --tweet-font-color-secondary: rgb(139, 152, 165);
     --tweet-bg-color: rgb(21, 32, 43);

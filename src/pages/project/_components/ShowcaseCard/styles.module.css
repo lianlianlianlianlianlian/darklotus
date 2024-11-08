@@ -33,11 +33,7 @@
 
 .showcaseCardTitle a {
   @apply no-underline;
-  background: linear-gradient(
-      var(--ifm-color-primary),
-      var(--ifm-color-primary)
-    )
-    no-repeat right bottom;
+  background: linear-gradient(var(--ifm-color-primary), var(--ifm-color-primary)) no-repeat right bottom;
   background-size: 0px 2px;
   transition: background-size 300ms;
 }
@@ -46,7 +42,6 @@
   background-size: 100% 2px;
   background-position: left bottom;
 }
-
 
 .showcaseCardSrcBtn {
   margin-left: 6px;
@@ -59,12 +54,12 @@
   background-color: var(--ifm-color-secondary-dark);
 }
 
-html[data-theme='dark'] .showcaseCardSrcBtn {
+html[data-theme="dark"] .showcaseCardSrcBtn {
   background-color: var(--ifm-color-emphasis-200) !important;
   color: inherit;
 }
 
-html[data-theme='dark'] .showcaseCardSrcBtn:hover {
+html[data-theme="dark"] .showcaseCardSrcBtn:hover {
   background-color: var(--ifm-color-emphasis-300) !important;
 }
 

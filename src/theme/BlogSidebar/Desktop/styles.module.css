@@ -58,7 +58,7 @@
   --back-btn-bg-color-hover: #f1f5f9;
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --back-btn-bg-color: #18181b;
   --back-btn-bg-color-hover: #334155;
 }

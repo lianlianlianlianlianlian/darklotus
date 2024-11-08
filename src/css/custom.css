@@ -3,7 +3,8 @@
 @tailwind utilities; /* 引入 Tailwind CSS 的工具类样式 */
 
 @layer base {
-  :root { /* 定义全局 CSS 变量 */
+  :root {
+    /* 定义全局 CSS 变量 */
     --content-background: #fefefe; /* 内容背景颜色 */
     --ifm-color-primary: #12affa; /* 主要颜色 */
     --ifm-color-primary-dark: #05a1ec; /* 深色主要颜色 */
@@ -53,11 +54,12 @@
     --blog-item-shade: #f4f4f5; /* 博客项阴影颜色 */
 
     -webkit-font-smoothing: unset; /* 禁用字体平滑 */
-    
+
     --docusaurus-highlighted-code-line-bg: #d1d5db; /* 高亮代码行背景色 */
   }
 
-  html[data-theme='dark'] { /* 深色模式下的样式 */
+  html[data-theme="dark"] {
+    /* 深色模式下的样式 */
     --content-background: #18181b; /* 深色模式背景颜色 */
     --ifm-color-primary: hsl(214deg 100% 60%); /* 深色模式主要颜色 */
     --ifm-color-primary-light: hsl(214deg 100% 75%); /* 深色模式浅色主要颜色 */
@@ -88,7 +90,7 @@ body {
 }
 
 body {
-  font-family: misans, system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei'; /* 设置全局字体 */
+  font-family: misans, system-ui, -apple-system, "PingFang SC", "Microsoft YaHei"; /* 设置全局字体 */
 }
 
 .navbar__item {
@@ -103,7 +105,7 @@ body {
   --prism-background-color: #f6f8fa !important; /* 代码块背景颜色 */
 }
 
-html[data-theme='dark'] .theme-code-block {
+html[data-theme="dark"] .theme-code-block {
   --prism-background-color: #1e1e1e !important; /* 深色模式下的代码块背景颜色 */
 }
 
@@ -167,7 +169,7 @@ article p > span > a {
   line-height: 1.5rem; /* 链接行高 */
 }
 
-:where(html[data-theme='dark']) article .markdown strong {
+:where(html[data-theme="dark"]) article .markdown strong {
   color: #fff; /* 深色模式下加粗文本颜色 */
 }
 
@@ -220,7 +222,7 @@ code {
   color: var(--ifm-code-color); /* 代码颜色 */
 }
 
-div[class^='announcementBar_'] {
+div[class^="announcementBar_"] {
   background: repeating-linear-gradient(
     -35deg,
     var(--ifm-color-primary-lighter),
@@ -244,7 +246,7 @@ div[class^='announcementBar_'] {
 }
 
 .tag::after {
-  content: ''; /* 伪元素内容为空 */
+  content: ""; /* 伪元素内容为空 */
   position: absolute; /* 绝对定位 */
   bottom: 0; /* 与底部对齐 */
   left: 0; /* 与左侧对齐 */
@@ -265,38 +267,38 @@ div[class^='announcementBar_'] {
   display: none; /* 隐藏 GitHub Stats 的滚动条 */
 }
 
-.prose :where(img):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+.prose :where(img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   margin: 0; /* 图片 margin 设置为 0 */
 }
 
-.prose :where(strong):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+.prose :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--tw-prose-bold); /* 加粗文本颜色 */
   font-weight: 520; /* 字体粗细 */
 }
 
-.prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *))::before {
-  content: ''; /* 伪元素内容为空 */
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+  content: ""; /* 伪元素内容为空 */
 }
 
-.prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *))::after {
-  content: ''; /* 伪元素内容为空 */
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+  content: ""; /* 伪元素内容为空 */
 }
 
 @media (max-width: 996px) {
   .footer__col {
     flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
-      margin: 10px; /* 边距设置 */
-      min-width: 5px; /* 最小宽度设置 */
-      text-align: center; /* 文本居中对齐 */
+    margin: 10px; /* 边距设置 */
+    min-width: 5px; /* 最小宽度设置 */
+    text-align: center; /* 文本居中对齐 */
   }
 }
 
 @media (max-width: 421px) {
   .footer__col {
-      flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
-      margin: 10px; /* 边距设置 */
-      min-width: 50px; /* 最小宽度设置 */
-      text-align: center; /* 文本居中对齐 */
+    flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
+    margin: 10px; /* 边距设置 */
+    min-width: 50px; /* 最小宽度设置 */
+    text-align: center; /* 文本居中对齐 */
   }
 }
 
@@ -305,7 +307,8 @@ div[class^='announcementBar_'] {
   font-size: 12px; /* 字体大小 */
   line-height: 1.3333733333; /* 行高 */
   font-weight: 400; /* 字体粗细 */
-  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; /* 字体系列 */
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif; /* 字体系列 */
   background: var(--footer-background); /* 背景颜色 */
   color: var(--footer-text-color); /* 文本颜色 */
   overflow: hidden; /* 溢出隐藏 */
@@ -327,7 +330,8 @@ div[class^='announcementBar_'] {
   color: rgba(0, 0, 0, 0.88); /* 页脚标题颜色 */
   font-size: 14px; /* 字体大小 */
   line-height: 1.3333733333; /* 行高 */
-  font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* 字体系列 */
+  font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron",
+    "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* 字体系列 */
   letter-spacing: 0em; /* 字母间距 */
   font-size: 15px; /* 字体大小 */
   line-height: 1.3333733333; /* 行高 */
@@ -352,25 +356,24 @@ img {
 }
 
 @font-face {
-  font-family: 'HuangKaihua'; /* 自定义字体 */
-  src: url('./fonts/HuangKaihua.woff2') format('truetype'); /* 字体文件路径 */
+  font-family: "HuangKaihua"; /* 自定义字体 */
+  src: url("./fonts/HuangKaihua.woff2") format("truetype"); /* 字体文件路径 */
   font-weight: normal; /* 字体粗细 */
   font-style: normal; /* 字体样式 */
 }
 
 @font-face {
-  font-family: 'SpringRage'; /* 自定义字体 */
-  src: url('./fonts/SpringRage.ttf') format('truetype'); /* 字体文件路径 */
+  font-family: "SpringRage"; /* 自定义字体 */
+  src: url("./fonts/SpringRage.ttf") format("truetype"); /* 字体文件路径 */
 }
 
 /* 仅在中文环境下应用自定义字体 */
 .navbar__title:lang(zh-CN) {
-  font-family: 'HuangKaihua', cursive; /* 中文字体 */
+  font-family: "HuangKaihua", cursive; /* 中文字体 */
 }
 
 /* 仅在英文环境下应用自定义字体 */
 .navbar__title:lang(en) {
-  font-family: 'SpringRage', cursive; /* 英文字体 */
+  font-family: "SpringRage", cursive; /* 英文字体 */
   font-size: 18px; /* 字体大小，可根据需求调整 */
-
 }
