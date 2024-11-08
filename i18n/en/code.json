@@ -1,4 +1,66 @@
 {
+  "milestonePage.title": {
+    "message": "Milestones",
+    "description": "里程碑页面的标题"
+  },
+  "milestonePage.description": {
+    "message": "The history of DarkLotus",
+    "description": "里程碑页面的描述"
+  },
+  "milestonePage.descriptionText": {
+    "message": "A list of future plans and goals, as well as past achievements and milestones.",
+    "description": "里程碑页面的详细描述"
+  },
+  "roadmap.title1": {
+    "message": "Eat Burger King",
+    "description": "第一个路线图的标题"
+  },
+  "roadmap.description1": {
+    "message": "No one understands Burger King better than me.",
+    "description": "第一个路线图的描述"
+  },
+  "roadmap.date1": {
+    "message": "Planned for 2025",
+    "description": "第一个路线图的计划日期"
+  },
+  "roadmap.title2": {
+    "message": "Eat McDonald's",
+    "description": "第二个路线图的标题"
+  },
+  "roadmap.description2": {
+    "message": "McDonald's forever",
+    "description": "第二个路线图的描述"
+  },
+  "roadmap.date2": {
+    "message": "Planned for 2025",
+    "description": "第二个路线图的计划日期"
+  },
+  "milestones.title1": {
+    "message": "How are you?",
+    "description": "第一个里程碑的标题"
+  },
+  "milestones.description1": {
+    "message": "Added a milestone page to the homepage.",
+    "description": "第一个里程碑的描述"
+  },
+  "milestones.title2": {
+    "message": "Add Milestone",
+    "description": "第二个里程碑的标题"
+  },
+  "milestones.description2": {
+    "message": "Added a milestone page to the homepage.",
+    "description": "第二个里程碑的描述"
+  },
+  "release.title": {
+    "message": "First Commit",
+    "description": "发布版本的标题"
+  },
+  "release.description": {
+    "message": "The first commit on GitHub, DarkLotus was born.",
+    "description": "发布版本的描述"
+  },
+
+
   "theme.friends.applyLink": {
     "message": "Request a Friend Link",
     "description": "申请友链"
