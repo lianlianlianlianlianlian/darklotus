@@ -17,22 +17,18 @@ jobs:
         with:
           node-version: '20'
 
-      - run: corepack enable
+      - name: Set up pnpm
+        run: |
+          npm install -g pnpm
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - name: Install Dependencies with pnpm
+        run: pnpm install
 
-      - name: Install ni
-        run: nci
+      - name: Build with pnpm
+        run: pnpm build
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
-        run: nr build
-
-      - name: Lint
-        run: nr lint
+      - name: Lint with pnpm
+        run: pnpm lint
 
       - name: SSH Deploy and Execute Build
         uses: easingthemes/ssh-deploy@v4.1.10
