@@ -3,38 +3,42 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - main  # 仅当推送到主分支时触发
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # 使用 Ubuntu 环境来执行 CI 构建
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4  # 拉取代码到 CI 环境
 
-      - name: Set node version to 20
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20'  # 设置 Node.js 版本为 20
 
-      - name: Clean npm cache
-        run: npm cache clean --force  # 清理缓存
+      - name: Install Dependencies with npm
+        run: |
+          npm install  # 使用 npm 安装项目依赖
 
-      - name: Install dependencies
-        run: npm install  # 安装依赖
+      - name: format with npm
+        run: npm run format   
 
-      - name: Build
-        run: npm run build  # 执行构建
+      - name: lint:fix with npm
+        run: npm run lint:fix  
 
-      - name: Lint
-        run: npm run lint  # 执行 lint
+      - name: Build with npm
+        run: npm run build  # 使用 npm 运行构建命令
+
+      - name: Lint with npm
+        run: npm run lint  # 使用 npm 运行代码检查命令
 
       - name: SSH Deploy and Execute Build
-        uses: easingthemes/ssh-deploy@v4.1.10
+        uses: easingthemes/ssh-deploy@v4.1.10  # 使用 SSH 部署脚本将构建结果部署到远程服务器
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avzr --delete'
-          SOURCE: 'build'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'root'
-          TARGET: '/www/wwwroot/darklotus.cn/index'
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 通过 GitHub Secrets 安全传递私钥
+          ARGS: '-avzr --delete'  # 传递给 rsync 的参数，确保删除远程不再需要的文件
+          SOURCE: 'build'  # 本地构建的文件夹
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}  # 远程主机地址，通过 Secrets 配置
+          REMOTE_USER: 'root'  # 远程服务器用户名
+          TARGET: '/www/wwwroot/darklotus.cn/index'  # 远程目标路径，将构建文件上传到该目录
