@@ -20,6 +20,11 @@ interface Props {
 export function Timeline({ items }: Props): JSX.Element {
   const isBrowser = useIsBrowser()
 
+  // 添加数据检查，防止传入空数组或 undefined
+  if (!items || items.length === 0) {
+    return <div>No timeline items available</div>
+  }
+
   return (
     <ul className="flex flex-col pl-4">
       {items.map((item, index) => {
@@ -80,3 +85,5 @@ export function Timeline({ items }: Props): JSX.Element {
     </ul>
   )
 }
+
+export default Timeline
