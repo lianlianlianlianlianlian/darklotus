@@ -85,7 +85,7 @@ const milestones: Item[] = [
     title: translate({ id: 'milestones.title2', message: '增加里程碑' }),
     description: translate({ id: 'milestones.description2', message: '主页增加里程碑页面' }),
     getDateLabel: withLanguage(new Date(2024, 10, 9)),
-//    customLink: { url: '', text: '6️⃣6️⃣6️⃣' }, // 自定义链接
+    //    customLink: { url: '', text: '6️⃣6️⃣6️⃣' }, // 自定义链接
   },
   withRelease({
     icon: 'noto-v1:party-popper',
