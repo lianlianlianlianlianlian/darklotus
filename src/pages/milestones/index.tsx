@@ -1,7 +1,8 @@
 import { translate } from '@docusaurus/Translate'
-import { mdiDatabaseOutline, mdiFlash, mdiPartyPopper, mdiTableKey } from '@mdi/js'
+import { Icon } from '@iconify/react' // 引入Iconify图标库
 import Layout from '@theme/Layout' // Docusaurus页面布局组件
 import React from 'react'
+import BackToTopButton from '../../components/BackToTopButton/BackToTopButton' // 导入返回顶部按钮组件
 import { Item, Timeline } from './timeline' // 自定义Timeline组件和Item类型
 
 // 定义版本号及其发布日期
@@ -40,6 +41,7 @@ const withRelease = ({
       text: version,
     },
     getDateLabel: withLanguage(releases[version]),
+    //   customLink: { url: 'https://example.com/custom', text: '自定义链接' }, // 示例自定义链接
   }
 }
 
@@ -47,19 +49,30 @@ const withRelease = ({
 const roadmap: Item[] = [
   {
     done: false,
-    icon: mdiFlash,
-    iconColor: 'gold',
-    title: translate({ id: 'roadmap.title1', message: '吃汉堡王' }),
-    description: translate({ id: 'roadmap.description1', message: '没有人比我更懂汉堡王' }),
+    icon: 'simple-icons:kfc',
+    iconColor: 'red',
+    title: translate({ id: 'roadmap.title1', message: '吃肯德基' }),
+    description: translate({ id: 'roadmap.description1', message: '疯狂星期四V我50' }),
     getDateLabel: () => translate({ id: 'roadmap.date1', message: '计划于2025年' }),
+    customLink: { url: 'https://kfcapp.cn/', text: '💴V你50💰' }, // 自定义链接
   },
   {
     done: false,
-    icon: mdiTableKey,
-    iconColor: 'gray',
+    icon: 'simple-icons:burgerking',
+    iconColor: '#FF8800',
+    title: translate({ id: 'roadmap.title1', message: '吃汉堡王' }),
+    description: translate({ id: 'roadmap.description1', message: '没有人比我更懂汉堡王' }),
+    getDateLabel: () => translate({ id: 'roadmap.date1', message: '计划于2025年' }),
+    customLink: { url: 'https://www.bkchina.cn/', text: '🍔吃起嘛吃起🍟' }, // 自定义链接
+  },
+  {
+    done: false,
+    icon: 'simple-icons:mcdonalds',
+    iconColor: 'gold',
     title: translate({ id: 'roadmap.title2', message: '吃麦当劳' }),
     description: translate({ id: 'roadmap.description2', message: '麦门永存' }),
     getDateLabel: () => translate({ id: 'roadmap.date2', message: '计划于2025年' }),
+    customLink: { url: 'https://www.mcdonalds.com.cn/', text: '🥤带你去吃🐔' }, // 自定义链接
   },
   // ...其他规划项
 ]
@@ -67,26 +80,22 @@ const roadmap: Item[] = [
 // 已发布版本和里程碑
 const milestones: Item[] = [
   {
-    icon: mdiDatabaseOutline,
-    iconColor: 'brown',
-    title: translate({ id: 'milestones.title1', message: '你好吗' }),
-    description: translate({ id: 'milestones.description1', message: '主页增加里程碑页面' }),
-    getDateLabel: withLanguage(new Date(2024, 10, 10)),
-  },
-  {
-    icon: mdiDatabaseOutline,
-    iconColor: 'brown',
+    icon: 'twemoji:bullseye',
+    iconColor: 'gray',
     title: translate({ id: 'milestones.title2', message: '增加里程碑' }),
     description: translate({ id: 'milestones.description2', message: '主页增加里程碑页面' }),
     getDateLabel: withLanguage(new Date(2024, 10, 9)),
+//    customLink: { url: '', text: '6️⃣6️⃣6️⃣' }, // 自定义链接
   },
   withRelease({
-    icon: mdiPartyPopper,
+    icon: 'noto-v1:party-popper',
     iconColor: 'deeppink',
     title: translate({ id: 'release.title', message: '首次提交' }),
-    description: translate({ id: 'release.description', message: '在GitHub上的首次提交，DarkLotus诞生。' }),
+    description: translate({ id: 'release.description', message: '在GitHub上的首次提交，黑暗之莲诞生。' }),
     release: 'v1.0.0',
+    customLink: { url: 'https://github.com/lianlianlianlianlianlian/darklotus', text: '项目主页' }, // 自定义链接
   }),
+  // ...其他里程碑...
 ]
 
 // 页面组件，展示里程碑与路线图
@@ -117,6 +126,7 @@ export default function MilestonePage(): JSX.Element {
           <Timeline items={sortedItems} />
         </div>
       </section>
+      <BackToTopButton />
     </Layout>
   )
 }

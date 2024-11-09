@@ -1,6 +1,7 @@
 import useIsBrowser from '@docusaurus/useIsBrowser'
+import { Icon as IconifyIcon } from '@iconify/react' // 用于卡片部分的图标
 import { mdiCheckboxBlankCircle, mdiCheckboxMarkedCircle } from '@mdi/js'
-import Icon from '@mdi/react'
+import Icon from '@mdi/react' // 用于链接线部分的图标
 import React from 'react'
 
 export type Item = {
@@ -9,6 +10,7 @@ export type Item = {
   title: string
   description?: string
   link?: { url: string; text: string }
+  customLink?: { url: string; text: string } // 新增的自定义链接
   done?: boolean
   getDateLabel: (language: string) => string // 日期标签函数
 }
@@ -20,7 +22,6 @@ interface Props {
 export function Timeline({ items }: Props): JSX.Element {
   const isBrowser = useIsBrowser()
 
-  // 添加数据检查，防止传入空数组或 undefined
   if (!items || items.length === 0) {
     return <div>No timeline items available</div>
   }
@@ -33,7 +34,6 @@ export function Timeline({ items }: Props): JSX.Element {
         const done = item.done ?? true
         const dateLabel = item.getDateLabel(isBrowser ? navigator.language : 'zh-CN')
         const timelineIcon = done ? mdiCheckboxMarkedCircle : mdiCheckboxBlankCircle
-        const cardIcon = item.icon
 
         return (
           <li key={index} className={`flex min-h-24 w-[700px] max-w-[90vw] ${done ? '' : 'italic'}`}>
@@ -43,17 +43,17 @@ export function Timeline({ items }: Props): JSX.Element {
             </div>
 
             {/* 连接线部分 */}
-            <div className={`${isFirst && 'relative top-[50%]'}${isLast && 'relative bottom-[50%]'}`}>
+            <div className={`${isFirst && 'relative top-[50%]'} ${isLast && 'relative bottom-[50%]'}`}>
               <div
                 className={`h-full border-4 border-[#ff8080] border-solid dark:border-[#adcbfa] ${
                   isFirst && 'rounded rounded-t-full'
-                }${isLast && 'rounded rounded-b-full'}`}
+                } ${isLast && 'rounded rounded-b-full'}`}
               ></div>
             </div>
 
-            {/* 图标部分 */}
+            {/* 链接线图标 */}
             <div className="relative top-[50%] left-[-3px] z-10 flex h-8 w-8 translate-x-[-50%] translate-y-[-50%] items-center rounded-full border-2 border-solid bg-[#ff8080] text-white shadow-lg dark:bg-[#adcbfa]">
-              {<Icon path={timelineIcon} size={1.25} color="#ffffff" />} {/* 图标设为白色，确保与背景形成对比 */}
+              <Icon path={timelineIcon} size={1.25} color="#ffffff" />
             </div>
 
             {/* 项目卡片部分 */}
@@ -61,7 +61,7 @@ export function Timeline({ items }: Props): JSX.Element {
               {/* 标题和描述 */}
               <div className="flex flex-grow flex-col justify-between gap-2">
                 <div className="flex items-center gap-2">
-                  <Icon path={cardIcon} size={1} color={item.iconColor || '#ff8080'} className="dark:fill-[#adcbfa]" />
+                  <IconifyIcon icon={item.icon} fontSize="24px" color={item.iconColor || '#ff8080'} />
                   <p className="m-0 mt-1 flex place-items-center items-start gap-2 text-lg">
                     <span>{item.title}</span>
                   </p>
@@ -73,7 +73,17 @@ export function Timeline({ items }: Props): JSX.Element {
               <div className="flex flex-col items-end justify-between">
                 {item.link && (
                   <a href={item.link.url} target="_blank" rel="noopener" className="text-[#ff8080] dark:text-[#adcbfa]">
-                    [{item.link.text}]
+                    {item.link.text}
+                  </a>
+                )}
+                {item.customLink && (
+                  <a
+                    href={item.customLink.url}
+                    target="_blank"
+                    rel="noopener"
+                    className="text-[#ff8080] dark:text-[#adcbfa]"
+                  >
+                    {item.customLink.text}
                   </a>
                 )}
                 <div className="text-right text-sm md:hidden">{dateLabel}</div>
