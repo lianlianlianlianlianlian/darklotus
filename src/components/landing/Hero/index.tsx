@@ -1,13 +1,13 @@
-import Translate from '@docusaurus/Translate'
-import { Icon } from '@iconify/react'
-import SocialLinks from '@site/src/components/SocialLinks'
-import { type Variants, motion } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
-import { MovingButton } from '../../magicui/moving-border'
-import HeroSvg from './img/hero.svg'
-import styles from './styles.module.css'
+import { type Variants, motion } from 'framer-motion';
+import { Icon } from '@iconify/react';
+import React, { useEffect, useState } from 'react';
+import Translate from '@docusaurus/Translate';
+import SocialLinks from '@site/src/components/SocialLinks';
+import { MovingButton } from '../../magicui/moving-border';
+import HeroSvg from './img/hero.svg';
+import styles from './styles.module.css';
 
-// 定义 Iconify 图标名称数组
+// Define Iconify icon names
 const icons = [
   'streamline-emojis:pouting-cat-face',
   'streamline-emojis:watermelon-2',
@@ -60,10 +60,10 @@ const icons = [
   'twemoji:laptop',
   'token-branded:popcat',
   'token-branded:bai',
-]
+];
 
 const variants: Variants = {
-  visible: i => ({
+  visible: (i) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -75,36 +75,35 @@ const variants: Variants = {
     },
   }),
   hidden: { opacity: 0, y: 30 },
-}
+};
 
 function getRandomIcon() {
-  return icons[Math.floor(Math.random() * icons.length)]
+  return icons[Math.floor(Math.random() * icons.length)];
 }
 
-function isIconValid(icon) {
-  // 检查图标是否有效
-  // 这里可以添加加载图标的逻辑，比如尝试加载图标并查看是否成功
-  return true // 假设所有图标都有效
+function isIconValid(icon: string) {
+  // Check if the icon is valid
+  return true; // Assume all icons are valid for now
 }
 
 function Circle() {
-  return <div className={styles.circle} />
+  return <div className={styles.circle} />;
 }
 
 function Name() {
-  const [currentIcon, setCurrentIcon] = useState(getRandomIcon())
+  const [currentIcon, setCurrentIcon] = useState(getRandomIcon());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let newIcon
+      let newIcon;
       do {
-        newIcon = getRandomIcon()
-      } while (!isIconValid(newIcon)) // 确保新图标有效
-      setCurrentIcon(newIcon)
-    }, 2000) // 每隔两秒切换图标
+        newIcon = getRandomIcon();
+      } while (!isIconValid(newIcon));
+      setCurrentIcon(newIcon);
+    }, 2000); // Change icon every 2 seconds
 
-    return () => clearInterval(interval) // 清理副作用
-  }, [])
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <motion.div
@@ -113,27 +112,35 @@ function Name() {
       initial="hidden"
       animate="visible"
       variants={variants}
-      onMouseMove={e => {
-        e.currentTarget.style.setProperty('--x', `${e.clientX}px`)
-        e.currentTarget.style.setProperty('--y', `${e.currentTarget.clientY}px`)
+      onMouseMove={(e) => {
+        e.currentTarget.style.setProperty('--x', `${e.clientX}px`);
+        e.currentTarget.style.setProperty('--y', `${e.clientY}px`);
       }}
     >
       <Translate id="homepage.hero.greet">Hello! 我是</Translate>
       <span
         className={styles.name}
-        onMouseMove={e => {
-          const bounding = e.currentTarget.getBoundingClientRect()
-          e.currentTarget.style.setProperty('--mouse-x', `${bounding.x}px`)
-          e.currentTarget.style.setProperty('--mouse-y', `${bounding.y}px`)
+        onMouseMove={(e) => {
+          const bounding = e.currentTarget.getBoundingClientRect();
+          e.currentTarget.style.setProperty('--mouse-x', `${bounding.x}px`);
+          e.currentTarget.style.setProperty('--mouse-y', `${bounding.y}px`);
         }}
       >
         <Translate id="homepage.hero.name">Lian</Translate>
       </span>
-      <span className="ml-1">
-        <Icon icon={currentIcon} /> {/* 显示当前图标 */}
+      {/* This span wraps the icon and ensures it responds to the same mouse events */}
+      <span
+        className={styles.icon_wrap}
+        onMouseMove={(e) => {
+          const bounding = e.currentTarget.getBoundingClientRect();
+          e.currentTarget.style.setProperty('--mouse-x', `${bounding.x}px`);
+          e.currentTarget.style.setProperty('--mouse-y', `${bounding.y}px`);
+        }}
+      >
+        <Icon icon={currentIcon} />
       </span>
     </motion.div>
-  )
+  );
 }
 
 export default function Hero() {
@@ -163,5 +170,5 @@ export default function Hero() {
         <Circle />
       </motion.div>
     </motion.div>
-  )
+  );
 }
