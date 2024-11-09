@@ -4,6 +4,11 @@
     "description": "The title in the navbar"
   },
 
+  "item.label.里程碑": {
+    "message": "milestones",
+    "description": "The title in the navbar"
+  },
+
   "item.label.更多": {
     "message": "More",
     "description": "Navbar item with label More"
