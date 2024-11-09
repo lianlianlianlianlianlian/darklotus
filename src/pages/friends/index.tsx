@@ -6,6 +6,7 @@ import CodeBlock from '@theme/CodeBlock'
 import Layout from '@theme/Layout'
 import { motion } from 'framer-motion'
 import { memo, useRef, useState } from 'react'
+import BackToTopButton from '../../components/BackToTopButton/BackToTopButton' // 导入返回顶部按钮组件
 import styles from './styles.module.css'
 
 const TITLE = translate({
@@ -116,6 +117,7 @@ export default function FriendLink(): JSX.Element {
           <SiteInfo />
         </motion.div>
       </motion.main>
+      <BackToTopButton />
       <div ref={commentRef} className={styles.commentContainer}>
         <Comment />
       </div>
