@@ -3,12 +3,22 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffffff00; /* 按钮背景色 */
-  color: white; /* 按钮文字颜色 */
+  background-color: transparent; /* 按钮背景透明 */
   border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
   cursor: pointer;
-  z-index: 1000; /* 确保按钮在最上层 */
+  z-index: 1000;
   transition: opacity 0.3s;
+  /* 修改按钮的大小 */
+  padding: 15px 20px; /* 调整按钮的内边距，控制按钮大小 */
+  font-size: 24px; /* 调整字体大小，影响按钮中的图标 */
+}
+
+/* 默认图标颜色为白天模式 */
+:root {
+  --icon-color: #212121; /* 白天模式颜色 */
+}
+
+/* 如果是黑夜模式 */
+[data-theme="dark"] {
+  --icon-color: #ffffff; /* 黑夜模式颜色 */
 }
