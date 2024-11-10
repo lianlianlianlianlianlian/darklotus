@@ -286,23 +286,47 @@ div[class^="announcementBar_"] {
 
 @media (max-width: 996px) {
   .footer__col {
-    flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
-    margin: 10px; /* 边距设置 */
-    min-width: 5px; /* 最小宽度设置 */
-    text-align: center; /* 文本居中对齐 */
+    flex: 1 0 15%;
+    margin: 1px;
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 确保左对齐 */
+  }
+
+  .footer__title {
+    text-align: left; /* 标题左对齐 */
+    margin-bottom: 10px;
+  }
+
+  .footer__link {
+    text-align: left; /* 链接左对齐 */
   }
 }
 
 @media (max-width: 421px) {
   .footer__col {
-    flex: 1 0 30%; /* 设置为弹性盒子，最小宽度为 30% */
-    margin: 10px; /* 边距设置 */
-    min-width: 50px; /* 最小宽度设置 */
-    text-align: center; /* 文本居中对齐 */
+    flex: 1 0 20%;
+    margin: 10px;
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 确保左对齐 */
+  }
+
+  .footer__title {
+    text-align: left; /* 标题左对齐 */
+    margin-bottom: 10px;
+  }
+
+  .footer__link {
+    text-align: left; /* 链接左对齐 */
   }
 }
 
+
 .footer {
+  margin-top: 20px;
   --footer-background: rgb(245, 245, 247); /* 页脚背景颜色 */
   font-size: 12px; /* 字体大小 */
   line-height: 1.3333733333; /* 行高 */
