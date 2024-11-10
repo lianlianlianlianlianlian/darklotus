@@ -47,12 +47,12 @@ jobs:
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/darklotus.cn/index'
 
-      # 部署到服务器2 (端口2299)
+      # 部署到服务器2 (端口22)
       - name: SSH Deploy to Server 2
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 2299"'
+          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 22"'
           SOURCE: 'build'
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: 'root'
