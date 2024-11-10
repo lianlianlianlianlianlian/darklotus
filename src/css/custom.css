@@ -1,5 +1,5 @@
 @tailwind base; /* 引入 Tailwind CSS 的基础样式 */
-
+@tailwind components;
 @tailwind utilities; /* 引入 Tailwind CSS 的工具类样式 */
 
 @layer base {
@@ -376,4 +376,10 @@ img {
 .navbar__title:lang(en) {
   font-family: "SpringRage", cursive; /* 英文字体 */
   font-size: 18px; /* 字体大小，可根据需求调整 */
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--ifm-container-width-xl);
+  }
 }
