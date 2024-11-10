@@ -54,7 +54,7 @@ jobs:
           SOURCE: 'build'  # 本地构建的文件夹
           REMOTE_HOST: ${{ secrets.HOST }}  # 远程主机地址，通过 Secrets 配置
           REMOTE_USER: 'root'  # 远程服务器用户名
-          TARGET: '/www/wwwroot/darklotus.cn/index'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
+          TARGET: '/www/wwwroot/darklotus.cn/index'  
 
 
           
