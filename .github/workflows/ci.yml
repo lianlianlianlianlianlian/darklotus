@@ -41,7 +41,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 服务器1的私钥
-          ARGS: '-avzr --delete'  # 默认SSH端口22
+          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 22"'  # 跳过主机密钥检查
           SOURCE: 'build'  # 本地构建的文件夹
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}  # 服务器1的主机地址
           REMOTE_USER: 'root'  # 远程服务器用户名
@@ -52,7 +52,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}  # 服务器2的私钥
-          ARGS: '-avzr --delete --rsh="ssh -p 2299"'  # 指定SSH端口2299
+          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 2299"'  # 跳过主机密钥检查
           SOURCE: 'build'  # 本地构建的文件夹
           REMOTE_HOST: ${{ secrets.HOST }}  # 服务器2的主机地址
           REMOTE_USER: 'root'  # 远程服务器用户名
