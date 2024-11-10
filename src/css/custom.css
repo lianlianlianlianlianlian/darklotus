@@ -378,8 +378,6 @@ img {
   font-size: 18px; /* 字体大小，可根据需求调整 */
 }
 
-@media (min-width: 1440px) {
-  .container {
-    max-width: var(--ifm-container-width-xl);
-  }
+.container {
+  max-width: var(--ifm-container-width-xl) !important;
 }
