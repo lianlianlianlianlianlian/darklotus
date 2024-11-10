@@ -40,20 +40,20 @@ jobs:
       - name: SSH Deploy to Server 1
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 服务器1的私钥
-          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 22"'  # 跳过主机密钥检查
-          SOURCE: 'build'  # 本地构建的文件夹
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}  # 服务器1的主机地址
-          REMOTE_USER: 'root'  # 远程服务器用户名
-          TARGET: '/www/wwwroot/darklotus.cn/index'  # 远程目标路径
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 22"'
+          SOURCE: 'build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/darklotus.cn/index'
 
       # 部署到服务器2 (端口2299)
       - name: SSH Deploy to Server 2
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}  # 服务器2的私钥
-          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 2299"'  # 跳过主机密钥检查
-          SOURCE: 'build'  # 本地构建的文件夹
-          REMOTE_HOST: ${{ secrets.HOST }}  # 服务器2的主机地址
-          REMOTE_USER: 'root'  # 远程服务器用户名
-          TARGET: '/www/wwwroot/darklotus.cn/index'  # 远程目标路径
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          ARGS: '-avzr --delete --rsh="ssh -o StrictHostKeyChecking=no -p 2299"'
+          SOURCE: 'build'
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/darklotus.cn/index'
