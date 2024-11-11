@@ -5,7 +5,7 @@ date: 2024-09-20 05:28
 authors: lian
 tags: [Synology,Nas,Docker,Minio]
 keywords: [Synology,Nas,Docker,Minio,教程]
-image: https://ts1.cn.mm.bing.net/th/id/R-C.df6070e7f9867d103c0051bd8a3a5109?rik=NW%2f9mdowN6LtZQ&riu=http%3a%2f%2fdevopshub.cn%2fwp-content%2fuploads%2f2016%2f07%2fdocker-logo.png&ehk=6b6lMd8pD60BnZejGC06xcVPXvbZaqGptnCJrkR43fk%3d&risl=&pid=ImgRaw&r=0
+image: https://oss.darklotus.cn/img/2024/11/12/docker.avif
 
 
 ---
