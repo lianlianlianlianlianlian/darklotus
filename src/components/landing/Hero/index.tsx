@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react' // 引入 React 的 Hooks（useEffect 和 useState）
 import Translate from '@docusaurus/Translate' // 引入 Docusaurus 的 Translate 组件，用于国际化翻译
 import { Icon } from '@iconify/react' // 从 Iconify 导入图标组件
 import SocialLinks from '@site/src/components/SocialLinks' // 导入社交链接组件
 import { type Variants, motion } from 'framer-motion' // 从 framer-motion 导入动画相关的类型和组件
+import React, { useEffect, useState } from 'react' // 引入 React 的 Hooks（useEffect 和 useState）
 import { MovingButton } from '../../magicui/moving-border' // 导入自定义的 MovingButton 组件
 import HeroSvg from './img/hero.svg' // 导入背景 SVG 图片
 import styles from './styles.module.css' // 导入组件的 CSS 模块
