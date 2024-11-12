@@ -40,15 +40,21 @@ const config: Config = {
     // 微软统计
     scripts: [
       {
-        src: "https://www.clarity.ms/tag/ox7npeheaj", // 替换为你的 Clarity ID
+        // 你的 Clarity 统计代码
+        src: "https://www.clarity.ms/tag/ox7npeheaj",
         async: true,
       },
+      {
+        type: 'text/javascript',
+        content: `
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "ox7npeheaj");
+        `,
+      },
     ],
-    colorMode: {
-      defaultMode: 'dark',  // 默认模式设为 'dark'
-      disableSwitch: false,  // 设置为 false 时，Docusaurus 会在页面顶部的导航栏中显示一个明暗模式切换开关，用户可以手动切换页面的主题（比如从浅色切换到深色，或反之）。
-      respectPrefersColorScheme: true,  // 自动检测用户的系统颜色偏好
-    },
     image: 'img/og.png',
     // 元数据
     metadata: [
