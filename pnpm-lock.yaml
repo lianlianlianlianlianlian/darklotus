@@ -50,6 +50,9 @@ importers:
       docusaurus-plugin-baidu-tongji:
         specifier: 0.0.0-beta.4
         version: 0.0.0-beta.4
+      docusaurus-plugin-clarity:
+        specifier: ^2.1.0
+        version: 2.1.0
       docusaurus-plugin-image-zoom:
         specifier: ^2.0.0
         version: 2.0.0(@docusaurus/theme-classic@3.6.1(@types/react@18.3.12)(acorn@8.14.0)(eslint@9.14.0(jiti@2.4.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))
@@ -2624,6 +2627,10 @@ packages:
 
   docusaurus-plugin-baidu-tongji@0.0.0-beta.4:
     resolution: {integrity: sha512-LePs8OLhaeHJBeZlZDDgWDbsHKERQAt7F0ELZ77X8tG3xCOkSLmNq+KTsQ+QhpsLp8xtRtyOqGtYiEaQPFMdBw==}
+
+  docusaurus-plugin-clarity@2.1.0:
+    resolution: {integrity: sha512-8BHjDC+69m3yQTqBHJ1xFhijHqbCjJJs19bEVySX8DpnGWlPBDbGiujEqEAyIba0sSjYaJNfg/4n61k1NOm0lw==}
+    engines: {node: '>=10.15.1'}
 
   docusaurus-plugin-image-zoom@2.0.0:
     resolution: {integrity: sha512-TWHQZeoiged+95CESlZk++lihzl3pqw34n0/fbexx2AocmFhbo9K2scYDgYB8amki4/X6mUCLTPZE1pQvT+00Q==}
@@ -9684,6 +9691,8 @@ snapshots:
       '@leichtgewicht/ip-codec': 2.0.5
 
   docusaurus-plugin-baidu-tongji@0.0.0-beta.4: {}
+
+  docusaurus-plugin-clarity@2.1.0: {}
 
   docusaurus-plugin-image-zoom@2.0.0(@docusaurus/theme-classic@3.6.1(@types/react@18.3.12)(acorn@8.14.0)(eslint@9.14.0(jiti@2.4.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)):
     dependencies:

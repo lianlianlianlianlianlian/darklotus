@@ -38,13 +38,9 @@ const config: Config = {
     // },
     // Open Graph 图像
     // 微软统计
-    scripts: [
-      {
-        // Clarity 统计代码
-        src: "https://www.clarity.ms/tag/ox7npeheaj",
-        async: true,
-      },
-    ],
+    clarity: {
+      ID: 'ox7npeheaj', // 替换为你的 Clarity 项目 ID
+    },
     image: 'img/og.png',
     // 元数据
     metadata: [
@@ -260,6 +256,7 @@ copyright: `
   plugins: [
     'docusaurus-plugin-image-zoom', // 图像缩放插件
     '@docusaurus/plugin-ideal-image', // 理想图像处理插件
+    'docusaurus-plugin-clarity', // Clarity 插件
     ['docusaurus-plugin-baidu-tongji', { token: 'c459ddf38cb87892f0d4b191dd564033' }], // 百度统计（如果需要）
     [
       '@docusaurus/plugin-pwa', // PWA 插件
