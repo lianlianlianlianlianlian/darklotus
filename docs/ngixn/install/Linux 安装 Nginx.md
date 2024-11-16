@@ -6,8 +6,8 @@ title: Linux 安装 Nginx
 description: Linux 安装 Nginx
 date: 2024-10-27
 authors: lian
-tags: [ngixn,linux]
-keywords: [ngixn,linux]
+tags: [Ngixn,Linux]
+keywords: [Ngixn,Linux]
 
 ---
 

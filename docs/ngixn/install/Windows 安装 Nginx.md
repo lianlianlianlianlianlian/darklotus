@@ -6,8 +6,8 @@ title: Windows 安装 Nginx
 description: Windows 安装 Nginx # 描述
 date: 2024-10-27
 authors: lian
-tags: [ngixn,windows]
-keywords: [ngixn,windows]
+tags: [Ngixn,Windows]
+keywords: [Ngixn,Windows]
 
 ---
 
