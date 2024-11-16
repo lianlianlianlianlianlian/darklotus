@@ -19,6 +19,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "rsyncdeploy": "./deploy.sh",
     "clear": "docusaurus clear && rimraf changelog",
     "serve": "docusaurus serve",
     "format": "biome format --write ./src",
