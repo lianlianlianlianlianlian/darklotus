@@ -15,6 +15,7 @@ keywords: [docker]
 
 ![Looking Glass Server](../img/Looking-Glass-Server.webp)
 
+
 ## 自定义端口
 
 -e HTTP_PORT=2333 \
@@ -22,6 +23,11 @@ keywords: [docker]
 2333修改成你想要设置的端口
 
 运行命令即可
+
+## 拉取镜像
+```bash
+docker pull wikihostinc/looking-glass-server
+```
 
 ## 运行命令
 
