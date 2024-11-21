@@ -2,7 +2,7 @@
 id: jfif-to-jpg-batch
 slug: jfifjpg
 sidebar_position: 31
-title: jfif 批量修改为 jpg
+title: JFIF 批量修改为 JPG
 description: 介绍如何批量将 JFIF 文件修改为 JPG 格式的方法
 date: 2024-11-07
 authors: lian

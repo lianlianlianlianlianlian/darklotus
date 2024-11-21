@@ -6,8 +6,8 @@ title: Macos 安装 Nginx
 description: Macos 安装 Nginx # 描述
 date: 2024-10-27
 authors: lian
-tags: [Ngixn,MacOs]
-keywords: [Ngixn,MacOs]
+tags: [ngixn,mac]
+keywords: [ngixn,mac]
 
 ---
 
