@@ -46,7 +46,7 @@ jobs:
           #REMOTE_USER: 'root'  # 远程服务器用户名
          # TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
- sh
+# sh
       - name: SSH Deploy and Execute Build 2
         uses: easingthemes/ssh-deploy@v4.1.10  # 使用 SSH 部署脚本将构建结果部署到远程服务器
         env:
