@@ -20,6 +20,7 @@ keywords:
 
 在 macOS 外接键盘上，通常 Windows 键和 Ctrl 键的布局与 Windows 系统有所不同，导致在 macOS 上按键习惯不一致。要在 macOS 上调整外接键盘，使其 Ctrl 键适配 Windows 键的功能，你可以重新映射键位来模拟 Windows 的按键布局。以下是设置方法：
 
+---
 ### 方法一：通过系统偏好设置调整键位
 
 1. 打开 **系统偏好设置**。
@@ -29,6 +30,7 @@ keywords:
 
 这样一来，Command 键将被映射为 Control 键，比较符合 Windows 系统下 Ctrl 键的操作。
 
+---
 ### 方法二：使用 Karabiner-Elements 工具
 
 如果你需要更精细的映射，可以使用第三方软件 **Karabiner-Elements**：
