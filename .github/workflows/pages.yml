@@ -12,7 +12,7 @@ jobs:
       contents: write
 
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
     - name: Setup Node.js
@@ -31,3 +31,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+        force_orphan: true  # 确保gh-pages是一个独立的分支
