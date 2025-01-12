@@ -59,7 +59,7 @@ jobs:
           #TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
 
-       US
+      #US
       - name: SSH Deploy and Execute Build (Server 2)
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
