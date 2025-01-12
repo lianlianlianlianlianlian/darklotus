@@ -54,5 +54,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_2 }}  # 通过 GitHub Secrets 安全传递私钥
           ARGS: '-avzr --delete'  # 传递给 rsync 的参数，确保删除远程不再需要的文件
           SOURCE: 'build'  # 本地构建的文件夹
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_2 }}  # 远程主机地址，通过 Secrets 配置
           REMOTE_USER: 'root'  # 远程服务器用户名
           TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
+
