@@ -60,7 +60,7 @@ jobs:
 
 
       #US
-      - name: SSH Deploy and Execute Build (Server 2)
+      - name: SSH Deploy and Execute Build (Server 3)
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_3 }}  # 通过 GitHub Secrets 安全传递私钥
@@ -70,3 +70,15 @@ jobs:
           REMOTE_USER: 'root'  # 远程服务器用户名
           TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
+
+# Best
+- name: SSH Deploy and Execute Build  (Server 4)
+  uses: easingthemes/ssh-deploy@v4.1.10
+  env:
+    SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  # 为第二台服务器提供的私钥
+    ARGS: '-avzr --delete'  # 传递给 rsync 的参数
+    SOURCE: 'build'  # 本地构建的文件夹
+    REMOTE_HOST: ${{ secrets.REMOTE_HOST_4 }}  # 第二台服务器的主机地址
+    REMOTE_USER: 'root'  # 第二台服务器的用户名
+    SSH_PORT: ${{ secrets.SSH_PORT_4 }}  # 第二台服务器的端口号，从 Secrets 中获取
+    TARGET: '/www/wwwroot/darklotus.cn/'  # 第二台服务器的目标路径
