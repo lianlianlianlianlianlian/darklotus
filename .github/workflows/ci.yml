@@ -70,13 +70,13 @@ jobs:
           TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
 
-      # SSH Deploy for Server 4 (Custom Port)
-      - name: SSH Deploy and Execute Build (Server 4)
-        uses: easingthemes/ssh-deploy@v4.1.10
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  # 第二台服务器的私钥
-          ARGS: '-e "ssh -p ${{ secrets.SSH_PORT_4 }} -o StrictHostKeyChecking=no" -avzr --delete'  
-          SOURCE: 'build'  # 本地构建的文件夹
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_4 }}  # 第二台服务器地址
-          REMOTE_USER: 'root'
-          TARGET: '/www/wwwroot/darklotus.cn/'  # 第二台服务器目标路径
+# SSH Deploy for Server 4 (Custom Port)
+- name: SSH Deploy and Execute Build (Server 4)
+  uses: easingthemes/ssh-deploy@v4.1.10
+  env:
+    SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  
+    ARGS: '-e "ssh -p ${{ secrets.SSH_PORT_4 }} -o StrictHostKeyChecking=no" -avzr --delete'  
+    SOURCE: 'build'  
+    REMOTE_HOST: ${{ secrets.REMOTE_HOST_4 }}  
+    REMOTE_USER: 'root'
+    TARGET: '/www/wwwroot/darklotus.cn/'  
