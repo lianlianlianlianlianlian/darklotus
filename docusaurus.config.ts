@@ -23,7 +23,6 @@ const config: Config = {
   // 项目名称
   projectName: 'DarkLotus',
   // 自定义字段设置
-  trailingSlash: true,
   customFields: {
     // 博主简历
     bio: '耍起嘛耍起',
