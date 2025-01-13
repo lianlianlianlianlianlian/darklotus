@@ -74,7 +74,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v4.1.10
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  # 通过 GitHub Secrets 安全传递私钥
-          ARGS: '-e "ssh -p 2299 -o StrictHostKeyChecking=no" -avzr --delete'  
+          ARGS: '-avzr --delete'  # 传递给 rsync 的参数，确保删除远程不再需要的文件
           SOURCE: 'build'  # 本地构建的文件夹
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_4 }}  # 远程主机地址，通过 Secrets 配置
           REMOTE_USER: 'root'  # 远程服务器用户名
