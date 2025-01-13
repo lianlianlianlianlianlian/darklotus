@@ -69,14 +69,14 @@ jobs:
           REMOTE_USER: 'root'  # 远程服务器用户名
           TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
-# best
-- name: SSH Deploy and Execute Build (Server 4)
-  uses: easingthemes/ssh-deploy@v4.1.10
-  env:
-    SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_3 }}  # 这里使用了 Server 3 的私钥，确认是否正确
-    ARGS: '-e "ssh -p 2299 -o StrictHostKeyChecking=no" -avzr --delete'  # 修改为使用端口 2299
-    SOURCE: 'build'  # 本地构建的文件夹
-    REMOTE_HOST: ${{ secrets.REMOTE_HOST_3 }}  # 这里使用了 Server 3 的主机地址，确认是否正确
-    REMOTE_USER: 'root'  # 远程服务器用户名
-    TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径
+      # best
+      - name: SSH Deploy and Execute Build (Server 4)
+        uses: easingthemes/ssh-deploy@v4.1.10
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  # 通过 GitHub Secrets 安全传递私钥
+          ARGS: '-e "ssh -p 2299 -o StrictHostKeyChecking=no" -avzr --delete'  
+          SOURCE: 'build'  # 本地构建的文件夹
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_4 }}  # 远程主机地址，通过 Secrets 配置
+          REMOTE_USER: 'root'  # 远程服务器用户名
+          TARGET: '/www/wwwroot/darklotus.cn/'  # 远程目标路径，将构建文件上传到该目录已经开启ssh密钥登陆
 
