@@ -72,7 +72,7 @@ jobs:
 
 
 # Best
-- name: SSH Deploy and Execute Build  (Server 4)
+- name:  SSH Deploy and Execute Build (Server 4)
   uses: easingthemes/ssh-deploy@v4.1.10
   env:
     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_4 }}  # 为第二台服务器提供的私钥
